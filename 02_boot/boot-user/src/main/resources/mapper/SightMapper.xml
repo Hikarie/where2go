@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.boot.user.dao.SightMapper">
+  <resultMap id="BaseResultMap" type="com.example.boot.user.po.Sight">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sight_id" jdbcType="INTEGER" property="sightId" />
+    <result column="sight_name" jdbcType="VARCHAR" property="sightName" />
+    <result column="sight_type" jdbcType="VARCHAR" property="sightType" />
+    <result column="happiness_index" jdbcType="VARCHAR" property="happinessIndex" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="lng" jdbcType="DECIMAL" property="lng" />
+    <result column="lat" jdbcType="DECIMAL" property="lat" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+    <result column="views" jdbcType="INTEGER" property="views" />
+    <result column="description" jdbcType="LONGVARCHAR" property="description" />
+  </resultMap>
+</mapper>
