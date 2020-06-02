@@ -6,13 +6,14 @@ com.example.boot
 - dto : 存放数据传输对象，用于接收从前端传来的json对象。比如注册时，注册的信息可以用一个 dto 对象来接收
 - po : 存放与数据库中表相对应的java实体对象
 - vo : 存放业务返回结果对象，需要进行序列化为json。
-
+- application : 启动文件 
 
 resources
 
 - mapper : 存放mapper.xml 文件
+- static : 存放所有的静态资源，后续需要在服务器上进行映射，放在代码外部
 
-用到的插件：
-mybatis
-mybatis generator
+注意事项：
+如果遇到数据库连接失败，可能是配置文件未加载，或者是没有在maven中更改环境
+
 

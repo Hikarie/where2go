@@ -20,7 +20,7 @@ public class RegisterDto {
     /**
      * 密码
      */
-    @Length(min = 8, max = 20, message = "密码必须是8至20位")
+    @Length(min = 6, max = 20, message = "密码必须是6至20位")
     private String password;
 
     /**

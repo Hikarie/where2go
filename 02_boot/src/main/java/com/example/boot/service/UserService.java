@@ -29,8 +29,6 @@ public class UserService {
         user.setPassword(DigestUtils.md5DigestAsHex((dto.getPassword() + salt).getBytes()));
         user.setSalt(salt);
         user.setEmail(dto.getEmail());
-        System.out.println(user.getEmail());
-
         return userMapper.insert(user);
     }
 
@@ -39,10 +37,6 @@ public class UserService {
         //获取盐
         String salt = user.getSalt();
         String password = user.getPassword();
-        System.out.println(salt);
-        System.out.println(password);
-        System.out.println(DigestUtils.md5DigestAsHex((dto.getPassword() + salt).getBytes()));
-        //密码校验
         return DigestUtils.md5DigestAsHex((dto.getPassword() + salt).getBytes()).equals(user.getPassword());
     }
 }
