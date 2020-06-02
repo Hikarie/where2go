@@ -24,11 +24,11 @@ public class RegisterDTO {
     @Length(min = 8, max = 20, message = "密码必须是8至20位")
     private String password;
 
-//    public String getUserName() {
-//        return userName;
-//    }
-//
-//    public void setUserName(String userName) {
-//        this.userName = userName;
-//    }
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 }
