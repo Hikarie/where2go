@@ -5,17 +5,10 @@ import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @Author : wang ziyu
- * @create 2020/3/22 4:19
+ * @Author : wangziyu
+ * @Date : 2020/5/31 16:06
  */
-
-public class RegisterDTO {
-
-    /**
-     * 用户名
-     */
-    @NotBlank(message = "用户名不能为空")
-    private String userName;
+public class LoginDto {
 
     /**
      * 密码
@@ -23,12 +16,19 @@ public class RegisterDTO {
     @Length(min = 8, max = 20, message = "密码必须是8至20位")
     private String password;
 
-    public String getUserName() {
-        return userName;
+    /**
+     * 邮箱
+     */
+    @NotBlank(message = "邮箱不能为空")
+    private String email;
+
+
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -38,6 +38,5 @@ public class RegisterDTO {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
 }
