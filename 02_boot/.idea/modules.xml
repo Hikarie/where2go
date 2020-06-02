@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/boot.iml" filepath="$PROJECT_DIR$/boot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/boot-common/boot-common.iml" filepath="$PROJECT_DIR$/boot-common/boot-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/boot-user/boot-user.iml" filepath="$PROJECT_DIR$/boot-user/boot-user.iml" />
     </modules>
   </component>
 </project>
