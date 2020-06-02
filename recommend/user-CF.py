@@ -19,12 +19,12 @@ moviesDF = pd.read_csv(moviesPath, index_col=None)
 ratingsDF = pd.read_csv(ratingsPath, index_col=None)
 
 trainRatingsDF, testRatingsDF = train_test_split(ratingsDF, test_size=0.2)
-print("total_movie_count:" + str(len(set(ratingsDF['sight_id'].values.tolist()))))
-print("total_user_count:" + str(len(set(ratingsDF['user_id'].values.tolist()))))
-print("train_movie_count:" + str(len(set(trainRatingsDF['sight_id'].values.tolist()))))
-print("test_movie_count:" + str(len(set(testRatingsDF['sight_id'].values.tolist()))))
-print("train_user_count:" + str(len(set(trainRatingsDF['user_id'].values.tolist()))))
-print("test_user_count:" + str(len(set(testRatingsDF['user_id'].values.tolist()))))
+# print("total_movie_count:" + str(len(set(ratingsDF['sight_id'].values.tolist()))))
+# print("total_user_count:" + str(len(set(ratingsDF['user_id'].values.tolist()))))
+# print("train_movie_count:" + str(len(set(trainRatingsDF['sight_id'].values.tolist()))))
+# print("test_movie_count:" + str(len(set(testRatingsDF['sight_id'].values.tolist()))))
+# print("train_user_count:" + str(len(set(trainRatingsDF['user_id'].values.tolist()))))
+# print("test_user_count:" + str(len(set(testRatingsDF['user_id'].values.tolist()))))
 
 trainRatingsPivotDF = pd.pivot_table(trainRatingsDF[['user_id', 'sight_id', 'rating']], columns=['sight_id'],
                                      index=['user_id'], values='rating', fill_value=0)
@@ -47,7 +47,7 @@ def calCosineSimilarity(list1, list2):
     return res / (math.sqrt(denominator1 * denominator2))
 
 
-# 根据用户对电影的评分，来判断每个用户间相似度
+# 根据用户对景点的评分，来判断每个用户间相似度
 userSimMatrix = np.zeros((len(ratingValues), len(ratingValues)), dtype=np.float32)
 for i in range(len(ratingValues) - 1):
     for j in range(i + 1, len(ratingValues)):
@@ -74,14 +74,14 @@ userRecommendDict = dict()
 for i in range(len(ratingValues)):
     userRecommendDict[i] = sorted(enumerate(list(userRecommendValues[i])), key=lambda x: x[1], reverse=True)[:10]
 
-# 将一开始的索引转换为原来用户id与电影id
+# 将一开始的索引转换为原来用户id与景点id
 userRecommendList = []
 for key, value in userRecommendDict.items():
     user = usersMap[key]
     for (sight_id, val) in value:
         userRecommendList.append([user, moviesMap[sight_id]])
 
-# 将推荐结果的电影id转换成对应的电影名
+# 将推荐结果的景点id转换成对应的景点名
 recommendDF = pd.DataFrame(userRecommendList, columns=['user_id', 'sight_id'])
 recommendDF = pd.merge(recommendDF, moviesDF[['sight_id', 'sight_name']], on='sight_id', how='inner')
 print(recommendDF.tail(3))

@@ -1,8 +1,8 @@
-# 数据库表设计
+## 数据库表设计
 
 -----
 
-## 评分表
+### 评分表
 
 `ratings`
 
@@ -15,4 +15,3 @@
 | sight_id  |  int  |   外键    |    否    |     景点id     |
 |  rating   | float |    无     |    否    |      评分      |
 | timestamp | float |    无     |    否    |     时间戳     |
-
