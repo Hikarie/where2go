@@ -1,8 +1,10 @@
 package com.example.boot.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.example.boot.dto.LoginDto;
-import com.example.boot.service.UserService;
 import com.example.boot.dto.RegisterDto;
+import com.example.boot.service.UserService;
+import com.example.boot.vo.result.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,12 +26,12 @@ public class UserController {
     @PostMapping("/register")
     public String register(@Valid RegisterDto dto) {
         int result = userService.register(dto);
-        return result == 1 ? "注册成功" : "注册失败";
+        return result == 1 ? JSON.toJSONString(new sucessVO()) : JSON.toJSONString(new failVO());
     }
 
     @PostMapping("/login")
     public String register(@Valid LoginDto dto) {
         boolean res = userService.login(dto);
-        return res ? "登录成功" : "登录失败";
+        return res ? JSON.toJSONString(new sucessVO()) : JSON.toJSONString(new failVO());
     }
 }

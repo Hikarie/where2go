@@ -11,16 +11,16 @@ import javax.validation.constraints.NotBlank;
 public class LoginDto {
 
     /**
-     * 密码
-     */
-    @Length(min = 8, max = 20, message = "密码必须是8至20位")
-    private String password;
-
-    /**
      * 邮箱
      */
     @NotBlank(message = "邮箱不能为空")
     private String email;
+
+    /**
+     * 密码
+     */
+    @Length(min = 6, max = 20, message = "密码必须是6至20位")
+    private String password;
 
 
     public String getEmail() {
