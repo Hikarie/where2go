@@ -16,7 +16,8 @@
 
         <!-- 这个插件给生成的Java模型对象增加了equals和hashCode方法 -->
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
-
+        <!-- RowBoundsPlugin是MyBatis Generator中自带的一个分页插件 -->
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <!-- 注释 -->
         <commentGenerator>
             <!-- 是否不生成注释 -->

@@ -7,6 +7,7 @@ import com.example.boot.po.Sight;
 import com.example.boot.po.SightExample;
 import com.example.boot.po.User;
 import com.example.boot.vo.SightVO;
+import org.apache.ibatis.session.RowBounds;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,9 +67,12 @@ class BootApplicationTests {
     void getSightOfTop5() {
         //调用条件查询，获取5个景点的信息
         SightExample example = new SightExample();
-///        SightExample.Criteria criteria = example.createCriteria();
+        SightExample.Criteria criteria = example.createCriteria();
+//        criteria.andCountryEqualTo("意大利");
         example.setOrderByClause("happiness_index DESC");
-        List<Sight> list = sightMapper.selectByExample(example);
+        RowBounds rowBounds = new RowBounds(0,5);
+        List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
+//        String jsonCity = JSON.toJSONString(list);
         List<SightVO> listVO = new LinkedList<>();
         for (Sight it : list) {
             SightVO sightVO = new SightVO();

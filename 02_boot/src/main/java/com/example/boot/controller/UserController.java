@@ -26,12 +26,12 @@ public class UserController {
     @PostMapping("/register")
     public String register(@Valid RegisterDto dto) {
         int result = userService.register(dto);
-        return result == 1 ? JSON.toJSONString(new sucessVO()) : JSON.toJSONString(new failVO());
+        return result == 1 ? JSON.toJSONString(new SucessVO()) : JSON.toJSONString(new FailVO());
     }
 
     @PostMapping("/login")
     public String register(@Valid LoginDto dto) {
         boolean res = userService.login(dto);
-        return res ? JSON.toJSONString(new sucessVO()) : JSON.toJSONString(new failVO());
+        return res ? JSON.toJSONString(new SucessVO()) : JSON.toJSONString(new FailVO());
     }
 }

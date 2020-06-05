@@ -5,6 +5,7 @@ import com.example.boot.dao.SightMapper;
 import com.example.boot.po.Sight;
 import com.example.boot.po.SightExample;
 import com.example.boot.vo.SightVO;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,34 +24,35 @@ public class SightService {
     private SightMapper sightMapper;
 
 
-    public String happinessOfTop5() {
-        //调用条件查询，获取5个景点的信息 幸福指数 ------ happiness_index
+    public List<SightVO> happinessOfTop5() {
         SightExample example = new SightExample();
+        SightExample.Criteria criteria = example.createCriteria();
+///     criteria.andCountryEqualTo("意大利");
         example.setOrderByClause("happiness_index DESC");
-        List<Sight> list = sightMapper.selectByExample(example);
-        List<SightVO> listVO = new LinkedList<>();
+        RowBounds rowBounds = new RowBounds(0,5);
+        List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
+        List<SightVO> ListOfSightVO = new LinkedList<>();
         for (Sight it : list) {
             SightVO sightVO = new SightVO();
             BeanUtils.copyProperties(it, sightVO);
-            listVO.add(sightVO);
+            ListOfSightVO.add(sightVO);
         }
-        String jsonCity = JSON.toJSONString(listVO);
-        System.out.println("service: " + jsonCity);
-        return "{\"sight\":" + jsonCity + "}";
+        return ListOfSightVO;
     }
 
-    public String popularityOfTop5() {
-        //调用条件查询，获取5个景点的信息 人气 -----  浏览量
+    public List<SightVO> popularityOfTop5() {
         SightExample example = new SightExample();
-        example.setOrderByClause("happiness_index DESC");
-        List<Sight> list = sightMapper.selectByExample(example);
-        List<SightVO> listVO = new LinkedList<>();
+        SightExample.Criteria criteria = example.createCriteria();
+///     criteria.andCountryEqualTo("意大利");
+        example.setOrderByClause("views DESC");
+        RowBounds rowBounds = new RowBounds(0,5);
+        List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
+        List<SightVO> ListOfSightVO = new LinkedList<>();
         for (Sight it : list) {
             SightVO sightVO = new SightVO();
             BeanUtils.copyProperties(it, sightVO);
-            listVO.add(sightVO);
+            ListOfSightVO.add(sightVO);
         }
-        String jsonCity = JSON.toJSONString(listVO);
-        return "{\"sight\":" + jsonCity + "}";
+        return ListOfSightVO;
     }
 }
