@@ -6,6 +6,7 @@ import com.example.boot.dao.UserMapper;
 import com.example.boot.dto.CollectionDTO;
 import com.example.boot.dto.LoginDTO;
 import com.example.boot.dto.RegisterDTO;
+import com.example.boot.dto.UserDTO;
 import com.example.boot.po.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -82,7 +83,7 @@ public class UserService {
      * @param dto
      * @return
      */
-    public long getNumOfCollecions(CollectionDTO dto) {
+    public long getNumOfCollecions(UserDTO dto) {
         UserExample userExample = new UserExample();
         UserExample.Criteria userExampleCriteria = userExample.createCriteria();
         userExampleCriteria.andEmailEqualTo(dto.getEmail());
@@ -105,11 +106,12 @@ public class UserService {
         UserExample userExample = new UserExample();
         UserExample.Criteria userExampleCriteria = userExample.createCriteria();
         userExampleCriteria.andEmailEqualTo(dto.getEmail());
-        User user = userMapper.selectByExample(userExample).get(0);
+        List<User> userList = userMapper.selectByExample(userExample);
+        User user = userList.get(0);
 
         SightExample sightExample = new SightExample();
         SightExample.Criteria sightExampleCriteria = sightExample.createCriteria();
-        sightExampleCriteria.andCountryEqualTo(dto.getSightName());
+        sightExampleCriteria.andSightNameEqualTo(dto.getSightName());
         Sight sight = sightMapper.selectByExample(sightExample).get(0);
 
         // 如果用户已经收藏过该景点，则应该返回收藏失败

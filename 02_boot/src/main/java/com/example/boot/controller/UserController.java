@@ -8,10 +8,7 @@ import com.example.boot.dto.UserDTO;
 import com.example.boot.service.UserService;
 import com.example.boot.vo.result.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -32,7 +29,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/register")
-    public String register(@Valid RegisterDTO dto) {
+    public String register(@Valid @RequestBody  RegisterDTO dto) {
         int res = userService.register(dto);
         return res == 1 ? JSON.toJSONString(new SucessVO()) : JSON.toJSONString(new FailVO());
     }
@@ -43,7 +40,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/login")
-    public String register(@Valid LoginDTO dto) {
+    public String register(@RequestBody @Valid LoginDTO dto) {
         boolean res = userService.login(dto);
         return res ? JSON.toJSONString(new SucessVO()) : JSON.toJSONString(new FailVO());
     }
@@ -54,7 +51,7 @@ public class UserController {
      * @return
      */
     @GetMapping("/collection")
-    public String getNumbOfCollections(@Valid CollectionDTO dto) {
+    public String getNumbOfCollections(@RequestBody @Valid UserDTO dto) {
         long num = userService.getNumOfCollecions(dto);
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(num);
@@ -68,7 +65,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/collection")
-    public String UpdateCollection(@Valid CollectionDTO dto) {
+    public String UpdateCollection(@RequestBody @Valid CollectionDTO dto) {
         int res = userService.addCollection(dto);
         return res == 1 ? JSON.toJSONString(new SucessVO()) : JSON.toJSONString(new FailVO());
     }

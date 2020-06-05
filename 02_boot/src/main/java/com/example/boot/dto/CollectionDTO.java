@@ -1,5 +1,7 @@
 package com.example.boot.dto;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import javax.validation.constraints.NotBlank;
 
 /**

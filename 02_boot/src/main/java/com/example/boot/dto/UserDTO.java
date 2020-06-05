@@ -7,16 +7,14 @@ import javax.validation.constraints.NotBlank;
  * @Date : 2020/6/6 0:59
  */
 public class UserDTO {
-    @NotBlank(message = "景点名不能为空")
-    private String userName;
+    @NotBlank(message = "用户名不能为空")
+    private String email;
 
-    public String getUserName() {
-        return userName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setEmail(String email) {
+        this.email = email;
     }
-
-
 }

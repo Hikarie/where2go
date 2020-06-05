@@ -6,6 +6,7 @@ import com.example.boot.dao.UserMapper;
 import com.example.boot.po.Sight;
 import com.example.boot.po.SightExample;
 import com.example.boot.po.User;
+import com.example.boot.po.UserExample;
 import com.example.boot.vo.SightVO;
 import org.apache.ibatis.session.RowBounds;
 import org.junit.jupiter.api.Test;
@@ -27,36 +28,16 @@ class BootApplicationTests {
     private SightMapper sightMapper;
 
     @Test
-    void contextLoads() {
-        System.out.println("hello");
-    }
-
-    @Test
-    void connectMysql() {
-        //测试数据库连接情况
-        System.out.println("hello");
-    }
-
-    @Test
     void loginTest() {
         //测试数据库连接情况
         System.out.println("hello");
         String email = "12345678";
         String password = "123456789";
-        User user = userMapper.selectByEmail(email);
-        //获取盐
-        System.out.println(user.getSalt());
-        System.out.println(user.getPassword());
-        System.out.println(DigestUtils.md5DigestAsHex((password + user.getSalt()).getBytes()));
-    }
+        UserExample example = new UserExample();
+        UserExample.Criteria criteria = example.createCriteria();
+        criteria.andEmailEqualTo(email);
+        User user = userMapper.selectByExample(example).get(0);
 
-    @Test
-    void AddSight() {
-        //往数据库中添加部分数据
-        System.out.println("hello");
-        String email = "12345678";
-        String password = "123456789";
-        User user = userMapper.selectByEmail(email);
         //获取盐
         System.out.println(user.getSalt());
         System.out.println(user.getPassword());
@@ -68,11 +49,9 @@ class BootApplicationTests {
         //调用条件查询，获取5个景点的信息
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
-//        criteria.andCountryEqualTo("意大利");
         example.setOrderByClause("happiness_index DESC");
         RowBounds rowBounds = new RowBounds(0,5);
         List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
-//        String jsonCity = JSON.toJSONString(list);
         List<SightVO> listVO = new LinkedList<>();
         for (Sight it : list) {
             SightVO sightVO = new SightVO();

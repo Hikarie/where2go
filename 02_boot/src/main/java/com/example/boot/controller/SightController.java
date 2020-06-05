@@ -7,6 +7,7 @@ import com.example.boot.vo.SightVO;
 import com.example.boot.vo.result.SucessVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -56,7 +57,7 @@ public class SightController {
      * @return
      */
     @GetMapping("/information")
-    public String getInformation(@Valid SightDTO dto){
+    public String getInformation(@RequestBody @Valid SightDTO dto){
         List<SightVO> listOfSightVO = sightService.getSight(dto.getSightName());
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
