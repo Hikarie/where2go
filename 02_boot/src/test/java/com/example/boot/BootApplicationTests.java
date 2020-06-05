@@ -66,8 +66,7 @@ class BootApplicationTests {
     void getSightOfTop5() {
         //调用条件查询，获取5个景点的信息
         SightExample example = new SightExample();
-        SightExample.Criteria criteria = example.createCriteria();
-        criteria.andCountryEqualTo("country1");
+///        SightExample.Criteria criteria = example.createCriteria();
         example.setOrderByClause("happiness_index DESC");
         List<Sight> list = sightMapper.selectByExample(example);
         List<SightVO> listVO = new LinkedList<>();
