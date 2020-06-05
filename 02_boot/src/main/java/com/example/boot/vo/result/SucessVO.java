@@ -7,7 +7,7 @@ package com.example.boot.vo.result;
 public class SucessVO {
 
     private int status = 1;
-    private String msg = "成功";
+    private String message = "成功";
     private Object result;
 
     public Object getResult() {
@@ -26,12 +26,12 @@ public class SucessVO {
         this.status = status;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 

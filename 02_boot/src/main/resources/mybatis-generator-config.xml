@@ -80,19 +80,19 @@
              domainObjectName 是要生成的实体类名(可以不指定，默认按帕斯卡命名法将表名转换成类名)
              enableXXXByExample 默认为 true， 为 true 会生成一个对应Example帮助类，帮助你进行条件查询，不想要可以设为false
              -->
-<!--        <table schema="" tableName="user" domainObjectName="User"-->
-<!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-<!--               enableUpdateByExample="false" selectByExampleQueryId="false">-->
-            <!--是否使用实际列名,默认为false-->
-            <!--<property name="useActualColumnNames" value="false" />-->
-<!--        </table>-->
-        <table schema="" tableName="sight">
+        <table schema="" tableName="user" domainObjectName="User">
 <!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
 <!--               enableUpdateByExample="false" selectByExampleQueryId="false">-->
             <!--是否使用实际列名,默认为false-->
             <!--<property name="useActualColumnNames" value="false" />-->
         </table>
-<!--        <table schema="" tableName="collect"-->
+<!--        <table schema="" tableName="sight">-->
+<!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+<!--               enableUpdateByExample="false" selectByExampleQueryId="false">-->
+            <!--是否使用实际列名,默认为false-->
+            <!--<property name="useActualColumnNames" value="false" />-->
+<!--        </table>-->
+<!--        <table schema="" tableName="collection">-->
 <!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
 <!--               enableUpdateByExample="false" selectByExampleQueryId="false">-->
 <!--            &lt;!&ndash;是否使用实际列名,默认为false&ndash;&gt;-->

@@ -55,4 +55,18 @@ public class SightService {
         }
         return ListOfSightVO;
     }
+
+    public List<SightVO> getSight(String sightName) {
+        SightExample example = new SightExample();
+        SightExample.Criteria criteria = example.createCriteria();
+        criteria.andCountryEqualTo(sightName);
+        List<Sight> list = sightMapper.selectByExampleWithBLOBs(example);
+        List<SightVO> listOfSightVO = new LinkedList<>();
+        for (Sight it : list) {
+            SightVO sightVO = new SightVO();
+            BeanUtils.copyProperties(it, sightVO);
+            listOfSightVO.add(sightVO);
+        }
+        return listOfSightVO;
+    }
 }
