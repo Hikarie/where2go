@@ -3,7 +3,7 @@
 
 $(function(){
     let id = $.cookie("id");
-    document.cookie = "email = hikarinoda@163.com;";
+    // document.cookie = "email = hikarinoda@163.com;";
     if(typeof(id) == undefined){
         // 如果没有登录 
         $(".top_panel .right").css("visibility", "hidden");
@@ -68,7 +68,6 @@ $(function(){
     let list_cost = $(".cost");
     let rating_text = $(".rating-text");
     let tour_items = $(".tour_item");
-
     // slide_img[0].style.backgroundImage = "url(img/tour-item-8.jpg)";
 
     $.ajax({
@@ -76,14 +75,17 @@ $(function(){
         url: '/leaderboard/happinessOfTop5',
         dataType: 'json',
         success: function(d) {
-            let sight = d.sight;
+            let sight = d.result;
             // slide上显示前三个
             for(let i=0;i<3;i++){
                 slide_title[i].innerText = sight[i].sight_name;
                 slide_country[i].innerText = sight[i].country;
                 next_title[i].innerText = sight[(i+1)%3].sight_name;
-                slide_text[i].innerText = sight[i].description;
-                slide_img[i].style.backgroundImage = "url(img/"+sight[i].sight_name+".jpg)";
+                if(sight[i].description.length < 100)
+                    slide_text[i].innerText = sight[i].description;
+                else
+                    slide_text[i].innerText = sight[i].description.substring(0, 100)+"...";
+                slide_img[i].style.backgroundImage = "url(img/tour/"+sight[i].sight_name+".jpg)";
             }
             // most_hapiness 显示前五个
             for(let i=0;i<sight.length;i++){
@@ -91,7 +93,15 @@ $(function(){
                 list_country[i].innerText = sight[i].country;
                 list_cost[i].innerText = sight[i].happiness_index;
                 rating_text[i].innerText = sight[i].views + " 点击";
-                tour_items[i].style.backgroundImage = "url(img/"+sight[i].sight_name+".jpg)";
+                tour_items[i].style.backgroundImage = "url(img/tour/"+sight[i].sight_name+".jpg)";
+            }
+            // 轮换动效
+            for(let i=0;i<sight.length-1;i++){
+                list_title[i+5].innerText = sight[i].sight_name;
+                list_country[i+5].innerText = sight[i].country;
+                list_cost[i+5].innerText = sight[i].happiness_index;
+                rating_text[i+5].innerText = sight[i].views + " 点击";
+                tour_items[i+5].style.backgroundImage = "url(img/tour/"+sight[i].sight_name+".jpg)";
             }
         }
     });

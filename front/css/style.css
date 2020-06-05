@@ -1754,7 +1754,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 }
 .top_panel .left .input_wrap {
   height: 58px;
-  background: rgba(0, 0, 0, 0.64);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   width: 200px;
 }
@@ -2150,7 +2150,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   transition: all 0.4s ease-out;
 }
 .main_slider .slider_wrap .slide .slide_content .buttons .btn {
-  background: #D03000;
+  background: rgba(255, 30, 0, 0.513);
   height: 50px;
   line-height: 50px;
   width: auto;
