@@ -602,13 +602,13 @@ $(document).ready(function(){
     
     
     //Search Popup ========================/
-    $(".search_btn").on("click", function(e){
-        e.preventDefault();
+    // $(".search_btn").on("click", function(e){
+    //     e.preventDefault();
         
-        $("#modal_search").fadeIn();
-        $("html, body").addClass("locked");
-        popupFunction();
-    });
+    //     $("#modal_search").fadeIn();
+    //     $("html, body").addClass("locked");
+    //     popupFunction();
+    // });
     
     $("#modal_search .close").on("click", function(e){
         e.preventDefault();
