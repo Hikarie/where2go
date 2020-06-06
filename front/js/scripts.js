@@ -1128,11 +1128,11 @@ $(document).ready(function(){
     
     
     //Success form ========================/
-    $(".js-submit").on("click", function(e){
-        e.preventDefault();
-        $(".popup").removeClass("opened");
-        $("#contact-us-success").addClass("opened");
-    });
+    // $(".js-submit").on("click", function(e){
+    //     e.preventDefault();
+    //     $(".popup").removeClass("opened");
+    //     $("#contact-us-success").addClass("opened");
+    // });
     //Success form ========================/
     
 });
