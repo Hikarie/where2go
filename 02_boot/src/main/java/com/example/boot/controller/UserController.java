@@ -67,7 +67,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/collection")
-    public String updateCollection(@RequestBody @Valid CollectionDTO dto) {
+    public String addCollection(@RequestBody @Valid CollectionDTO dto) {
         int res = userService.addCollection(dto);
         return res == 1 ? JSON.toJSONString(new SucessVO()) : JSON.toJSONString(new FailVO());
     }

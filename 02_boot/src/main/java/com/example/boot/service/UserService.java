@@ -165,6 +165,7 @@ public class UserService {
             Sight sight = sightMapper.selectByPrimaryKey(it.getSightId());
             SightVO sightVO = new SightVO();
             BeanUtils.copyProperties(sight, sightVO);
+            sightVO.setDescription(null);
             listOfSightVO.add(sightVO);
         }
 

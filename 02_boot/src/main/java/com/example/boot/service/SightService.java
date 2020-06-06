@@ -6,6 +6,7 @@ import com.example.boot.dto.SightDTO;
 import com.example.boot.dto.UserDTO;
 import com.example.boot.po.Sight;
 import com.example.boot.po.SightExample;
+import com.example.boot.vo.SightInfo;
 import com.example.boot.vo.SightVO;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
@@ -34,7 +35,6 @@ public class SightService {
     public List<SightVO> happinessOfTop5() {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
-///     criteria.andCountryEqualTo("意大利");
         example.setOrderByClause("happiness_index DESC");
         RowBounds rowBounds = new RowBounds(0, 5);
         List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
@@ -55,7 +55,6 @@ public class SightService {
     public List<SightVO> popularityOfTop5() {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
-///     criteria.andCountryEqualTo("意大利");
         example.setOrderByClause("views DESC");
         RowBounds rowBounds = new RowBounds(0, 5);
         List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
@@ -74,18 +73,20 @@ public class SightService {
      * @param dto
      * @return
      */
-    public List<SightVO> getSight(SightDTO dto) {
+    public SightInfo getSight(SightDTO dto) {
+        // 获取景点的详细信息
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
-        criteria.andCountryEqualTo(dto.getSightName());
+        criteria.andSightNameEqualTo(dto.getSightName());
         List<Sight> list = sightMapper.selectByExampleWithBLOBs(example);
+        Sight sight = list.get(0);
+        // 更新访问量
+        sight.setViews(sight.getViews()+1);
+        sightMapper.updateByExampleSelective(sight,example);
         List<SightVO> listOfSightVO = new LinkedList<>();
-        for (Sight it : list) {
-            SightVO sightVO = new SightVO();
-            BeanUtils.copyProperties(it, sightVO);
-            listOfSightVO.add(sightVO);
-        }
-        return listOfSightVO;
+        SightInfo sightInfo = new SightInfo();
+        BeanUtils.copyProperties(sight, sightInfo);
+        return sightInfo;
     }
 
     /**
@@ -98,22 +99,43 @@ public class SightService {
     /**
      * 返回幸福指数排行榜
      */
-    public void happinessRanking() {
-        return;
+    public List<SightVO> happinessRanking() {
+        SightExample example = new SightExample();
+        SightExample.Criteria criteria = example.createCriteria();
+        example.setOrderByClause("happiness_index DESC");
+        List<Sight> list = sightMapper.selectByExampleWithBLOBs(example);
+        List<SightVO> listOfSightVO = new LinkedList<>();
+        for (Sight it : list) {
+            SightVO sightVO = new SightVO();
+            BeanUtils.copyProperties(it, sightVO);
+            listOfSightVO.add(sightVO);
+        }
+        return listOfSightVO;
     }
 
     /**
      * 在幸福排行榜的侧边栏展示人气排行的前五个景点
      */
-    public void popularityOf() {
-        return;
+    public List<SightVO> popularityOf() {
+        SightExample example = new SightExample();
+        SightExample.Criteria criteria = example.createCriteria();
+        example.setOrderByClause("views DESC");
+        RowBounds rowBounds = new RowBounds(0, 5);
+        List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
+        List<SightVO> listOfSightVO = new LinkedList<>();
+        for (Sight it : list) {
+            SightVO sightVO = new SightVO();
+            BeanUtils.copyProperties(it, sightVO);
+            listOfSightVO.add(sightVO);
+        }
+        return listOfSightVO;
     }
 
     /**
      * 返回人气指数排行榜
      */
-    public void popularityRanking() {
-        return;
+    public List<SightVO> popularityRanking() {
+        return null;
     }
 
 
