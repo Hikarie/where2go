@@ -23,16 +23,9 @@
 <body>
     <div class="container">
 
-        <div class="top_panel">   <!-- 导航栏 -->
+        <div class="top_panel" id="top_panel">   <!-- 导航栏 -->
                 <div class="wrap">
                     <div class="wrap_float">
-        <!--                    <div class="currency">
-                            <select>
-                                <option value="usd">usd</option>
-                                <option value="eur">eur</option>
-                                <option value="rub">rub</option>
-                            </select>
-                        </div> -->
                         <div class="left">
                             <a href="index.html" class="logo"> <!-- 网站logo -->
                                 <img src="img/IMG_0427.PNG" alt="">  
@@ -136,7 +129,7 @@
                                </p>
                                <div class="buttons">
                                    <a href="tour.html" class="btn button">了解更多</a>
-                                   <a href="travel-list-full-width.html" class="link"><span>收藏</span></a>
+                                   <a href="#" class="link"><span>收藏</span></a>
                                </div>
                                <div class="next_title">景点3</div>
                            </div>
@@ -685,12 +678,12 @@
                         填写注册表单，我们会将您的喜好同步到所有设备上。
                     </div>
                     <div class="form">
-                        <input type="text" class="input" placeholder="用户名">
-                        <input type="text" class="input" placeholder="姓名">
-                        <input type="email" class="input" placeholder="邮箱地址">
-                        <input type="password" class="input" placeholder="密码">
-                        <input type="password" class="input" placeholder="确认密码">
-                        <button class="submit button js-submit">注册</button>
+                            <input type="text" class="input" name="userName" placeholder="用户名">
+                            <input type="text" class="input" name="name" placeholder="姓名">
+                            <input type="email" class="input" name="reg_email" placeholder="邮箱地址">
+                            <input type="password" class="input" name="reg_password" placeholder="密码">
+                            <input type="password" class="input" placeholder="确认密码">
+                            <button class="submit button js-submit">注册</button>
                     </div>
                 </div>
             </div>
@@ -828,11 +821,11 @@
         <div class="scroll">
             <div class="scroll_wrap">
                 <div class="popup-head">
-                    <div class="title">Success</div>
+                    <div class="title">注册成功！</div>
                 </div>
                 <div class="popup-body">
                     <div class="subtitle">
-                        Your message was successfully sent. We will contact you shortly
+                        立即回到主页……
                     </div>
                 </div>
             </div>
