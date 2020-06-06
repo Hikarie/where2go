@@ -84,7 +84,11 @@ public class SightController {
      */
     @GetMapping("/happinessRanking")
     public String getHappinessRanking(){
-        return "未完成";
+        List<SightVO> listOfSightVO = sightService.happinessRanking();
+        SucessVO sucessVO = new SucessVO();
+        sucessVO.setResult(listOfSightVO);
+        String res = JSON.toJSONString(sucessVO);
+        return res;
     }
 
     /**
@@ -93,7 +97,11 @@ public class SightController {
      */
     @GetMapping("/sidebar/popularityOfTop5")
     public String getPopularityOfTop5(){
-        return "未完成";
+        List<SightVO> listOfSightVO = sightService.popularityOfTop5();
+        SucessVO sucessVO = new SucessVO();
+        sucessVO.setResult(listOfSightVO);
+        String res = JSON.toJSONString(sucessVO);
+        return res;
     }
 
     /**
@@ -102,7 +110,11 @@ public class SightController {
      */
     @GetMapping("/popularityRanking")
     public String getPopularityRanking(){
-        return "未完成";
+        List<SightVO> listOfSightVO = sightService.popularityRanking();
+        SucessVO sucessVO = new SucessVO();
+        sucessVO.setResult(listOfSightVO);
+        String res = JSON.toJSONString(sucessVO);
+        return res;
     }
 
 }

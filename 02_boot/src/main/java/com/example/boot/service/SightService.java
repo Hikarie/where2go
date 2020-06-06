@@ -91,6 +91,7 @@ public class SightService {
 
     /**
      * 在侧边栏展示个性化推荐的五个景点
+     * @param dto
      */
     public void personalizedSight(UserDTO dto) {
         return;
@@ -98,6 +99,7 @@ public class SightService {
 
     /**
      * 返回幸福指数排行榜
+     * @return
      */
     public List<SightVO> happinessRanking() {
         SightExample example = new SightExample();
@@ -113,15 +115,34 @@ public class SightService {
         return listOfSightVO;
     }
 
+//    /**
+//     * 在幸福排行榜的侧边栏展示人气排行的前五个景点
+//     * @return
+//     */
+//    public List<SightVO> popularityOf() {
+//        SightExample example = new SightExample();
+//        SightExample.Criteria criteria = example.createCriteria();
+//        example.setOrderByClause("views DESC");
+//        RowBounds rowBounds = new RowBounds(0, 5);
+//        List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
+//        List<SightVO> listOfSightVO = new LinkedList<>();
+//        for (Sight it : list) {
+//            SightVO sightVO = new SightVO();
+//            BeanUtils.copyProperties(it, sightVO);
+//            listOfSightVO.add(sightVO);
+//        }
+//        return listOfSightVO;
+//    }
+
     /**
-     * 在幸福排行榜的侧边栏展示人气排行的前五个景点
+     * 返回人气指数排行榜
+     * @return
      */
-    public List<SightVO> popularityOf() {
+    public List<SightVO> popularityRanking() {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
         example.setOrderByClause("views DESC");
-        RowBounds rowBounds = new RowBounds(0, 5);
-        List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
+        List<Sight> list = sightMapper.selectByExample(example);
         List<SightVO> listOfSightVO = new LinkedList<>();
         for (Sight it : list) {
             SightVO sightVO = new SightVO();
@@ -129,13 +150,6 @@ public class SightService {
             listOfSightVO.add(sightVO);
         }
         return listOfSightVO;
-    }
-
-    /**
-     * 返回人气指数排行榜
-     */
-    public List<SightVO> popularityRanking() {
-        return null;
     }
 
 
