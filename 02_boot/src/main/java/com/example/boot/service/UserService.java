@@ -8,10 +8,13 @@ import com.example.boot.dto.LoginDTO;
 import com.example.boot.dto.RegisterDTO;
 import com.example.boot.dto.UserDTO;
 import com.example.boot.po.*;
+import com.example.boot.vo.SightVO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
@@ -43,7 +46,7 @@ public class UserService {
         UserExample.Criteria criteria = example.createCriteria();
         criteria.andEmailEqualTo(dto.getEmail());
         List<User> list = userMapper.selectByExample(example);
-        if(list.size()>0){
+        if (list.size() > 0) {
             return 0;
         }
         //生成密码的随机盐
@@ -68,7 +71,7 @@ public class UserService {
         UserExample.Criteria criteria = example.createCriteria();
         criteria.andEmailEqualTo(dto.getEmail());
         List<User> list = userMapper.selectByExample(example);
-        if(list.size()>1){
+        if (list.size() > 1) {
             return false;
         }
         User user = list.get(0);
@@ -78,27 +81,29 @@ public class UserService {
     }
 
     /**
-     *  GET 获取用户收藏的景点个数
+     * GET 获取用户收藏的景点个数
      *
      * @param dto
      * @return
      */
     public long getNumOfCollecions(UserDTO dto) {
+        // 获取用户ID
         UserExample userExample = new UserExample();
         UserExample.Criteria userExampleCriteria = userExample.createCriteria();
         userExampleCriteria.andEmailEqualTo(dto.getEmail());
         User user = userMapper.selectByExample(userExample).get(0);
 
-        // 如果用户已经收藏过该景点，则应该返回收藏失败
+        // 根据用户ID查询收藏的景点个数
         CollectionExample collectionExample = new CollectionExample();
         CollectionExample.Criteria collectionExampleCriteria = collectionExample.createCriteria();
         collectionExampleCriteria.andUserIdEqualTo(user.getUserId());
         long num = collectionMapper.countByExample(collectionExample);
-        return (int)num;
+        return (int) num;
     }
 
     /**
      * POST 用户收藏景点
+     *
      * @param dto
      * @return
      */
@@ -119,9 +124,9 @@ public class UserService {
         CollectionExample.Criteria collectionExampleCriteria = collectionExample.createCriteria();
         collectionExampleCriteria.andUserIdEqualTo(user.getUserId());
         List<Collection> list = collectionMapper.selectByExample(collectionExample);
-        if(list.size()>0) {
-            for(Collection it : list){
-                if(it.getSightId().equals(sight.getSightId())){
+        if (list.size() > 0) {
+            for (Collection it : list) {
+                if (it.getSightId().equals(sight.getSightId())) {
                     return 0;
                 }
             }
@@ -135,5 +140,34 @@ public class UserService {
         return collectionMapper.insert(collection);
     }
 
+    /**
+     * 获取景点收藏列表 业务层
+     * @param dto
+     * @return
+     */
+    public List<SightVO> getCollectionList(UserDTO dto) {
+        // 获取用户ID
+        UserExample userExample = new UserExample();
+        UserExample.Criteria userExampleCriteria = userExample.createCriteria();
+        userExampleCriteria.andEmailEqualTo(dto.getEmail());
+        User user = userMapper.selectByExample(userExample).get(0);
+
+        // 根据用户ID,获取用户收藏的景点ID
+        CollectionExample collectionExample = new CollectionExample();
+        CollectionExample.Criteria collectionExampleCriteria = collectionExample.createCriteria();
+        collectionExampleCriteria.andUserIdEqualTo(user.getUserId());
+        List<Collection> collectionList = collectionMapper.selectByExample(collectionExample);
+        List<SightVO> listOfSightVO = new LinkedList<>();
+
+        //查询景点信息
+        for (Collection it : collectionList) {
+            Sight sight = sightMapper.selectByPrimaryKey(it.getSightId());
+            SightVO sightVO = new SightVO();
+            BeanUtils.copyProperties(sight, sightVO);
+            listOfSightVO.add(sightVO);
+        }
+
+        return listOfSightVO;
+    }
 
 }

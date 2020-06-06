@@ -2,6 +2,7 @@ package com.example.boot.service;
 
 import com.alibaba.fastjson.JSON;
 import com.example.boot.dao.SightMapper;
+import com.example.boot.dto.SightDTO;
 import com.example.boot.po.Sight;
 import com.example.boot.po.SightExample;
 import com.example.boot.vo.SightVO;
@@ -24,6 +25,10 @@ public class SightService {
     private SightMapper sightMapper;
 
 
+    /**
+     * 展示幸福指数最高的五个景点
+     * @return
+     */
     public List<SightVO> happinessOfTop5() {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
@@ -31,15 +36,19 @@ public class SightService {
         example.setOrderByClause("happiness_index DESC");
         RowBounds rowBounds = new RowBounds(0,5);
         List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
-        List<SightVO> ListOfSightVO = new LinkedList<>();
+        List<SightVO> listOfSightVO = new LinkedList<>();
         for (Sight it : list) {
             SightVO sightVO = new SightVO();
             BeanUtils.copyProperties(it, sightVO);
-            ListOfSightVO.add(sightVO);
+            listOfSightVO.add(sightVO);
         }
-        return ListOfSightVO;
+        return listOfSightVO;
     }
 
+    /**
+     * 展示人气指数最高的五个景点
+     * @return
+     */
     public List<SightVO> popularityOfTop5() {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
@@ -47,19 +56,24 @@ public class SightService {
         example.setOrderByClause("views DESC");
         RowBounds rowBounds = new RowBounds(0,5);
         List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
-        List<SightVO> ListOfSightVO = new LinkedList<>();
+        List<SightVO> listOfSightVO = new LinkedList<>();
         for (Sight it : list) {
             SightVO sightVO = new SightVO();
             BeanUtils.copyProperties(it, sightVO);
-            ListOfSightVO.add(sightVO);
+            listOfSightVO.add(sightVO);
         }
-        return ListOfSightVO;
+        return listOfSightVO;
     }
 
-    public List<SightVO> getSight(String sightName) {
+    /**
+     * 获取景点的详细信息
+     * @param dto
+     * @return
+     */
+    public List<SightVO> getSight(SightDTO dto) {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
-        criteria.andCountryEqualTo(sightName);
+        criteria.andCountryEqualTo(dto.getSightName());
         List<Sight> list = sightMapper.selectByExampleWithBLOBs(example);
         List<SightVO> listOfSightVO = new LinkedList<>();
         for (Sight it : list) {

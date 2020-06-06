@@ -58,7 +58,7 @@ public class SightController {
      */
     @GetMapping("/information")
     public String getInformation(@RequestBody @Valid SightDTO dto){
-        List<SightVO> listOfSightVO = sightService.getSight(dto.getSightName());
+        List<SightVO> listOfSightVO = sightService.getSight(dto);
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
         String res = JSON.toJSONString(sucessVO);

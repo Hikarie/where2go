@@ -6,11 +6,13 @@ import com.example.boot.dto.LoginDTO;
 import com.example.boot.dto.RegisterDTO;
 import com.example.boot.dto.UserDTO;
 import com.example.boot.service.UserService;
+import com.example.boot.vo.SightVO;
 import com.example.boot.vo.result.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  * @Author : wang ziyu
@@ -24,7 +26,7 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 实现注册功能
+     * POST 实现注册功能
      * @param dto
      * @return
      */
@@ -35,7 +37,7 @@ public class UserController {
     }
 
     /**
-     * 实现用户登录功能
+     * POST 实现用户登录功能
      * @param dto
      * @return
      */
@@ -46,11 +48,11 @@ public class UserController {
     }
 
     /**
-     * 获取用户收藏的景点个数
+     * GET 获取用户收藏的景点个数
      * @param dto
      * @return
      */
-    @GetMapping("/collection")
+    @GetMapping("/collectionNum")
     public String getNumbOfCollections(@RequestBody @Valid UserDTO dto) {
         long num = userService.getNumOfCollecions(dto);
         SucessVO sucessVO = new SucessVO();
@@ -60,14 +62,27 @@ public class UserController {
     }
 
     /**
-     * 用户收藏景点
+     * POST 用户收藏景点
      * @param dto
      * @return
      */
     @PostMapping("/collection")
-    public String UpdateCollection(@RequestBody @Valid CollectionDTO dto) {
+    public String updateCollection(@RequestBody @Valid CollectionDTO dto) {
         int res = userService.addCollection(dto);
         return res == 1 ? JSON.toJSONString(new SucessVO()) : JSON.toJSONString(new FailVO());
     }
 
+    /**
+     * GET 返回收藏景点列表
+     * @param dto
+     * @return
+     */
+    @GetMapping("/collection")
+    public String getCollection(@RequestBody @Valid UserDTO dto){
+        List<SightVO> listOfSightVO = userService.getCollectionList(dto);
+        SucessVO sucessVO = new SucessVO();
+        sucessVO.setResult(listOfSightVO);
+        String res = JSON.toJSONString(sucessVO);
+        return res;
+    }
 }
