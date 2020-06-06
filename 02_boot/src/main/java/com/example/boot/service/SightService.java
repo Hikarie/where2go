@@ -3,6 +3,7 @@ package com.example.boot.service;
 import com.alibaba.fastjson.JSON;
 import com.example.boot.dao.SightMapper;
 import com.example.boot.dto.SightDTO;
+import com.example.boot.dto.UserDTO;
 import com.example.boot.po.Sight;
 import com.example.boot.po.SightExample;
 import com.example.boot.vo.SightVO;
@@ -27,6 +28,7 @@ public class SightService {
 
     /**
      * 展示幸福指数最高的五个景点
+     *
      * @return
      */
     public List<SightVO> happinessOfTop5() {
@@ -34,7 +36,7 @@ public class SightService {
         SightExample.Criteria criteria = example.createCriteria();
 ///     criteria.andCountryEqualTo("意大利");
         example.setOrderByClause("happiness_index DESC");
-        RowBounds rowBounds = new RowBounds(0,5);
+        RowBounds rowBounds = new RowBounds(0, 5);
         List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
         List<SightVO> listOfSightVO = new LinkedList<>();
         for (Sight it : list) {
@@ -47,6 +49,7 @@ public class SightService {
 
     /**
      * 展示人气指数最高的五个景点
+     *
      * @return
      */
     public List<SightVO> popularityOfTop5() {
@@ -54,7 +57,7 @@ public class SightService {
         SightExample.Criteria criteria = example.createCriteria();
 ///     criteria.andCountryEqualTo("意大利");
         example.setOrderByClause("views DESC");
-        RowBounds rowBounds = new RowBounds(0,5);
+        RowBounds rowBounds = new RowBounds(0, 5);
         List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
         List<SightVO> listOfSightVO = new LinkedList<>();
         for (Sight it : list) {
@@ -67,6 +70,7 @@ public class SightService {
 
     /**
      * 获取景点的详细信息
+     *
      * @param dto
      * @return
      */
@@ -83,4 +87,34 @@ public class SightService {
         }
         return listOfSightVO;
     }
+
+    /**
+     * 在侧边栏展示个性化推荐的五个景点
+     */
+    public void personalizedSight(UserDTO dto) {
+        return;
+    }
+
+    /**
+     * 返回幸福指数排行榜
+     */
+    public void happinessRanking() {
+        return;
+    }
+
+    /**
+     * 在幸福排行榜的侧边栏展示人气排行的前五个景点
+     */
+    public void popularityOf() {
+        return;
+    }
+
+    /**
+     * 返回人气指数排行榜
+     */
+    public void popularityRanking() {
+        return;
+    }
+
+
 }

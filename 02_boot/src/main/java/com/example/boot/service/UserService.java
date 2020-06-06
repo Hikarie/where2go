@@ -35,7 +35,7 @@ public class UserService {
     private SightMapper sightMapper;
 
     /**
-     * POST 用户注册
+     * 用户注册
      *
      * @param dto
      * @return
@@ -61,7 +61,7 @@ public class UserService {
     }
 
     /**
-     * POST 用户登录
+     * 用户登录
      *
      * @param dto
      * @return
@@ -81,7 +81,7 @@ public class UserService {
     }
 
     /**
-     * GET 获取用户收藏的景点个数
+     * 获取用户收藏的景点个数
      *
      * @param dto
      * @return
@@ -102,7 +102,7 @@ public class UserService {
     }
 
     /**
-     * POST 用户收藏景点
+     * 用户收藏景点
      *
      * @param dto
      * @return
@@ -141,7 +141,8 @@ public class UserService {
     }
 
     /**
-     * 获取景点收藏列表 业务层
+     * 获取景点收藏列表
+     *
      * @param dto
      * @return
      */
