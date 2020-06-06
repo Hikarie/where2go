@@ -6166,6 +6166,15 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   margin-left: -9px;
   content: '';
 }
+
+.travel-list .posts .item_right .info .rating-text {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.37);
+  line-height: 40px;
+  width: auto;
+  padding-left: 380px;
+}
+
 .travel-list .posts .item_right .item_title {
   font-size: 33px;
   font-family: 'Prata', serif;
@@ -6183,7 +6192,9 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 0 44px 30px;
+  padding-bottom: 30px;
+  padding-left: 44px;
+  padding-right: 20px;
 }
 .travel-list .posts .item_right .info .days {
   font-size: 21px;
