@@ -2,6 +2,7 @@ package com.example.boot.dto;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -13,7 +14,7 @@ public class CollectionDTO {
     @NotBlank(message = "景点名不能为空")
     private String sightName;
 
-    @NotBlank(message = "邮箱不能为空")
+    @Email(message = "邮箱格式错误")
     private String email;
 
     public String getSightName() {
