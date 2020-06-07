@@ -602,13 +602,13 @@ $(document).ready(function(){
     
     
     //Search Popup ========================/
-    $(".search_btn").on("click", function(e){
-        e.preventDefault();
+    // $(".search_btn").on("click", function(e){
+    //     e.preventDefault();
         
-        $("#modal_search").fadeIn();
-        $("html, body").addClass("locked");
-        popupFunction();
-    });
+    //     $("#modal_search").fadeIn();
+    //     $("html, body").addClass("locked");
+    //     popupFunction();
+    // });
     
     $("#modal_search .close").on("click", function(e){
         e.preventDefault();
@@ -1128,11 +1128,11 @@ $(document).ready(function(){
     
     
     //Success form ========================/
-    $(".js-submit").on("click", function(e){
-        e.preventDefault();
-        $(".popup").removeClass("opened");
-        $("#contact-us-success").addClass("opened");
-    });
+    // $(".js-submit").on("click", function(e){
+    //     e.preventDefault();
+    //     $(".popup").removeClass("opened");
+    //     $("#contact-us-success").addClass("opened");
+    // });
     //Success form ========================/
     
 });

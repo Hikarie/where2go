@@ -1,39 +1,7 @@
 {
-  "sight": [
-    {
-      "country": "country1",
-      "happiness_index": 60.00,
-      "score": 5.0,
-      "sight_name": "sight5",
-      "views": 500
-    },
-    {
-      "country": "country1",
-      "happiness_index": 50.00,
-      "score": 5.0,
-      "sight_name": "sight2",
-      "views": 200
-    },
-    {
-      "country": "country1",
-      "happiness_index": 30.00,
-      "score": 5.0,
-      "sight_name": "sight4",
-      "views": 400
-    },
-    {
-      "country": "country1",
-      "happiness_index": 20.00,
-      "score": 5.0,
-      "sight_name": "sight3",
-      "views": 300
-    },
-    {
-      "country": "country1",
-      "happiness_index": 10.00,
-      "score": 5.0,
-      "sight_name": "sight1",
-      "views": 100
-    }
-  ]
+  "status": 1,
+  "message": "成功",
+  "result": {
+    "userName": "xxx"
+  }
 }

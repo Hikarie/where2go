@@ -21,70 +21,73 @@
 </head>
 <body>
     <div class="container">
-<div class="top_panel inversion">
-           <div class="wrap">
-               <div class="wrap_float">
-                   <div class="left">
-                       <a href="index.html" class="logo"> <!-- 网站logo -->
-                           <img src="img/IMG_0428.PNG" alt="">  
-                       </a>
-                       <div class="search_btn"></div>
-                   </div>
-                   <div class="menu_wrap" id="menu_wrap">
-                       <div class="scroll">
-                           <div class="center">
-                               <div class="menu">
-                                   <ul>
-                                       <li><a href="index.html"><span>主页</span></a></li>
-                                       <li><a href="happiness.html"><span>排行</span></a></li>
-                                       <li><a href="popular.html"><span>趋势</span></a></li>
-                                       <li > 
-                                           <a href="browse.html"><span>浏览</span></a>
-                                       </li>
-                                       <li><a href="about-us.html"><span>关于我们</span></a></li>
-                                   </ul>
+        <div class="top_panel inversion" id="top_panel">   <!-- 导航栏 -->
+            <div class="wrap">
+                <div class="wrap_float">
+                    <div class="left">
+                        <a href="index.html" class="logo"> <!-- 网站logo -->
+                            <img src="img/IMG_0428.PNG" alt="">  
+                        </a>
+                        <div class="input_wrap">
+                            <input type="search" class="input" placeholder="搜索景点">
+                        </div>
+                        <div class="search_btn"></div>
+                    </div>
+                    <div class="menu_wrap" id="menu_wrap">
+                        <div class="scroll">
+                            <div class="center">
+                                <div class="menu">
+                                    <ul>
+                                        <li><a href="index.html"><span>主页</span></a></li>
+                                        <li><a href="happiness.html"><span>排行</span></a></li>
+                                        <li><a href="popular.html"><span>趋势</span></a></li>
+                                        <li > 
+                                            <a href="browse.html"><span>浏览</span></a>
+                                        </li>
+                                        <li><a href="about-us.html"><span>关于我们</span></a></li>
+                                    </ul>
 
-                                   <div class="mobile_content">
-                                       <div class="currency_mob">
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="close" id="menu-close">
-                                   <span></span>
-                                   <span></span>
-                                   <span></span>
-                               </div>
-                           </div>
-                           <div class="right">
-                               <div class="tel"><a href=""><span>用户名</span></a></div>
-                               <a class="favorites-count" title="Favourites" href="favourites.html">
-                                   <div class="_counter">10</div>  <!-- 跟数据库交互！ -->
-                                   <div class="_text">收藏</div>
-                               </a>
-                           </div>
-                           <div class="user" id="userblock">
-                               <div class="userlink" id="userlink">
-<!--                                   <img src="img/userpic.jpg" alt="">-->
-                               </div>
-                               <div class="usermenu" id="usermenu">
-                                   <ul>
-                                       <li><a href="#" class="js-popup-open" data-href="#login">登录</a></li>
-                                       <li><a href="#" class="js-popup-open" data-href="#registration">注册</a></li>
-                                       <li><a href="#" class="js-popup-open" data-href="#recovery-pass">忘记密码</a></li>
-                                       <li><a href="#" class="js-popup-open" data-href="#profile-setting">设置</a></li>
-                                   </ul>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="mobile_btn" id="mobile_btn">
-                       <span></span>
-                       <span></span>
-                       <span></span>
-                   </div>
-               </div>
-           </div>
-       </div>
+                                    <div class="mobile_content">
+                                        <div class="currency_mob">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="close" id="menu-close">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="tel"><a href=""><span>用户名</span></a></div>
+                                <a class="favorites-count" title="Favourites" href="favourites.html">
+                                    <div class="_counter">0</div>  <!-- 跟数据库交互！ -->
+                                    <div class="_text">收藏</div>
+                                </a>
+                            </div>
+                            <div class="user" id="userblock">
+                                <div class="userlink" id="userlink">
+    <!--                                   <img src="img/userpic.jpg" alt="">-->
+                                </div>
+                                <div class="usermenu" id="usermenu">
+                                    <ul>
+                                        <li><a href="#" class="js-popup-open" data-href="#login">登录</a></li>
+                                        <li><a href="#" class="js-popup-open" data-href="#registration">注册</a></li>
+                                        <li><a href="#" class="js-popup-open" data-href="#recovery-pass">忘记密码</a></li>
+                                        <li><a href="#" class="js-popup-open" data-href="#profile-setting">设置</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile_btn" id="mobile_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div class="breadcrumbs">
     <div class="wrap">
         <div class="wrap_float">
@@ -100,254 +103,8 @@
             <div class="wrap">
                 <div class="wrap_float">
                     <h1 class="title">
-                        Favourites <span>10</span>
+                        收藏 <span>0</span>
                     </h1>
-                    <div class="select_wrap">
-                        <select>
-                           <option value="Destination" disabled selected>Destination</option>
-                           <option value="United States">United States</option> 
-                            <option value="United Kingdom">United Kingdom</option> 
-                            <option value="Afghanistan">Afghanistan</option> 
-                            <option value="Albania">Albania</option> 
-                            <option value="Algeria">Algeria</option> 
-                            <option value="American Samoa">American Samoa</option> 
-                            <option value="Andorra">Andorra</option> 
-                            <option value="Angola">Angola</option> 
-                            <option value="Anguilla">Anguilla</option> 
-                            <option value="Antarctica">Antarctica</option> 
-                            <option value="Antigua and Barbuda">Antigua and Barbuda</option> 
-                            <option value="Argentina">Argentina</option> 
-                            <option value="Armenia">Armenia</option> 
-                            <option value="Aruba">Aruba</option> 
-                            <option value="Australia">Australia</option> 
-                            <option value="Austria">Austria</option> 
-                            <option value="Azerbaijan">Azerbaijan</option> 
-                            <option value="Bahamas">Bahamas</option> 
-                            <option value="Bahrain">Bahrain</option> 
-                            <option value="Bangladesh">Bangladesh</option> 
-                            <option value="Barbados">Barbados</option> 
-                            <option value="Belarus">Belarus</option> 
-                            <option value="Belgium">Belgium</option> 
-                            <option value="Belize">Belize</option> 
-                            <option value="Benin">Benin</option> 
-                            <option value="Bermuda">Bermuda</option> 
-                            <option value="Bhutan">Bhutan</option> 
-                            <option value="Bolivia">Bolivia</option> 
-                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> 
-                            <option value="Botswana">Botswana</option> 
-                            <option value="Bouvet Island">Bouvet Island</option> 
-                            <option value="Brazil">Brazil</option> 
-                            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option> 
-                            <option value="Brunei Darussalam">Brunei Darussalam</option> 
-                            <option value="Bulgaria">Bulgaria</option> 
-                            <option value="Burkina Faso">Burkina Faso</option> 
-                            <option value="Burundi">Burundi</option> 
-                            <option value="Cambodia">Cambodia</option> 
-                            <option value="Cameroon">Cameroon</option> 
-                            <option value="Canada">Canada</option> 
-                            <option value="Cape Verde">Cape Verde</option> 
-                            <option value="Cayman Islands">Cayman Islands</option> 
-                            <option value="Central African Republic">Central African Republic</option> 
-                            <option value="Chad">Chad</option> 
-                            <option value="Chile">Chile</option> 
-                            <option value="China">China</option> 
-                            <option value="Christmas Island">Christmas Island</option> 
-                            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option> 
-                            <option value="Colombia">Colombia</option> 
-                            <option value="Comoros">Comoros</option> 
-                            <option value="Congo">Congo</option> 
-                            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option> 
-                            <option value="Cook Islands">Cook Islands</option> 
-                            <option value="Costa Rica">Costa Rica</option> 
-                            <option value="Cote D'ivoire">Cote D'ivoire</option> 
-                            <option value="Croatia">Croatia</option> 
-                            <option value="Cuba">Cuba</option> 
-                            <option value="Cyprus">Cyprus</option> 
-                            <option value="Czech Republic">Czech Republic</option> 
-                            <option value="Denmark">Denmark</option> 
-                            <option value="Djibouti">Djibouti</option> 
-                            <option value="Dominica">Dominica</option> 
-                            <option value="Dominican Republic">Dominican Republic</option> 
-                            <option value="Ecuador">Ecuador</option> 
-                            <option value="Egypt">Egypt</option> 
-                            <option value="El Salvador">El Salvador</option> 
-                            <option value="Equatorial Guinea">Equatorial Guinea</option> 
-                            <option value="Eritrea">Eritrea</option> 
-                            <option value="Estonia">Estonia</option> 
-                            <option value="Ethiopia">Ethiopia</option> 
-                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option> 
-                            <option value="Faroe Islands">Faroe Islands</option> 
-                            <option value="Fiji">Fiji</option> 
-                            <option value="Finland">Finland</option> 
-                            <option value="France">France</option> 
-                            <option value="French Guiana">French Guiana</option> 
-                            <option value="French Polynesia">French Polynesia</option> 
-                            <option value="French Southern Territories">French Southern Territories</option> 
-                            <option value="Gabon">Gabon</option> 
-                            <option value="Gambia">Gambia</option> 
-                            <option value="Georgia">Georgia</option> 
-                            <option value="Germany">Germany</option> 
-                            <option value="Ghana">Ghana</option> 
-                            <option value="Gibraltar">Gibraltar</option> 
-                            <option value="Greece">Greece</option> 
-                            <option value="Greenland">Greenland</option> 
-                            <option value="Grenada">Grenada</option> 
-                            <option value="Guadeloupe">Guadeloupe</option> 
-                            <option value="Guam">Guam</option> 
-                            <option value="Guatemala">Guatemala</option> 
-                            <option value="Guinea">Guinea</option> 
-                            <option value="Guinea-bissau">Guinea-bissau</option> 
-                            <option value="Guyana">Guyana</option> 
-                            <option value="Haiti">Haiti</option> 
-                            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option> 
-                            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option> 
-                            <option value="Honduras">Honduras</option> 
-                            <option value="Hong Kong">Hong Kong</option> 
-                            <option value="Hungary">Hungary</option> 
-                            <option value="Iceland">Iceland</option> 
-                            <option value="India">India</option> 
-                            <option value="Indonesia">Indonesia</option> 
-                            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option> 
-                            <option value="Iraq">Iraq</option> 
-                            <option value="Ireland">Ireland</option> 
-                            <option value="Israel">Israel</option> 
-                            <option value="Italy">Italy</option> 
-                            <option value="Jamaica">Jamaica</option> 
-                            <option value="Japan">Japan</option> 
-                            <option value="Jordan">Jordan</option> 
-                            <option value="Kazakhstan">Kazakhstan</option> 
-                            <option value="Kenya">Kenya</option> 
-                            <option value="Kiribati">Kiribati</option> 
-                            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option> 
-                            <option value="Korea, Republic of">Korea, Republic of</option> 
-                            <option value="Kuwait">Kuwait</option> 
-                            <option value="Kyrgyzstan">Kyrgyzstan</option> 
-                            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option> 
-                            <option value="Latvia">Latvia</option> 
-                            <option value="Lebanon">Lebanon</option> 
-                            <option value="Lesotho">Lesotho</option> 
-                            <option value="Liberia">Liberia</option> 
-                            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option> 
-                            <option value="Liechtenstein">Liechtenstein</option> 
-                            <option value="Lithuania">Lithuania</option> 
-                            <option value="Luxembourg">Luxembourg</option> 
-                            <option value="Macao">Macao</option> 
-                            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option> 
-                            <option value="Madagascar">Madagascar</option> 
-                            <option value="Malawi">Malawi</option> 
-                            <option value="Malaysia">Malaysia</option> 
-                            <option value="Maldives">Maldives</option> 
-                            <option value="Mali">Mali</option> 
-                            <option value="Malta">Malta</option> 
-                            <option value="Marshall Islands">Marshall Islands</option> 
-                            <option value="Martinique">Martinique</option> 
-                            <option value="Mauritania">Mauritania</option> 
-                            <option value="Mauritius">Mauritius</option> 
-                            <option value="Mayotte">Mayotte</option> 
-                            <option value="Mexico">Mexico</option> 
-                            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option> 
-                            <option value="Moldova, Republic of">Moldova, Republic of</option> 
-                            <option value="Monaco">Monaco</option> 
-                            <option value="Mongolia">Mongolia</option> 
-                            <option value="Montserrat">Montserrat</option> 
-                            <option value="Morocco">Morocco</option> 
-                            <option value="Mozambique">Mozambique</option> 
-                            <option value="Myanmar">Myanmar</option> 
-                            <option value="Namibia">Namibia</option> 
-                            <option value="Nauru">Nauru</option> 
-                            <option value="Nepal">Nepal</option> 
-                            <option value="Netherlands">Netherlands</option> 
-                            <option value="Netherlands Antilles">Netherlands Antilles</option> 
-                            <option value="New Caledonia">New Caledonia</option> 
-                            <option value="New Zealand">New Zealand</option> 
-                            <option value="Nicaragua">Nicaragua</option> 
-                            <option value="Niger">Niger</option> 
-                            <option value="Nigeria">Nigeria</option> 
-                            <option value="Niue">Niue</option> 
-                            <option value="Norfolk Island">Norfolk Island</option> 
-                            <option value="Northern Mariana Islands">Northern Mariana Islands</option> 
-                            <option value="Norway">Norway</option> 
-                            <option value="Oman">Oman</option> 
-                            <option value="Pakistan">Pakistan</option> 
-                            <option value="Palau">Palau</option> 
-                            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option> 
-                            <option value="Panama">Panama</option> 
-                            <option value="Papua New Guinea">Papua New Guinea</option> 
-                            <option value="Paraguay">Paraguay</option> 
-                            <option value="Peru">Peru</option> 
-                            <option value="Philippines">Philippines</option> 
-                            <option value="Pitcairn">Pitcairn</option> 
-                            <option value="Poland">Poland</option> 
-                            <option value="Portugal">Portugal</option> 
-                            <option value="Puerto Rico">Puerto Rico</option> 
-                            <option value="Qatar">Qatar</option> 
-                            <option value="Reunion">Reunion</option> 
-                            <option value="Romania">Romania</option> 
-                            <option value="Russian Federation">Russian Federation</option> 
-                            <option value="Rwanda">Rwanda</option> 
-                            <option value="Saint Helena">Saint Helena</option> 
-                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
-                            <option value="Saint Lucia">Saint Lucia</option> 
-                            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option> 
-                            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option> 
-                            <option value="Samoa">Samoa</option> 
-                            <option value="San Marino">San Marino</option> 
-                            <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
-                            <option value="Saudi Arabia">Saudi Arabia</option> 
-                            <option value="Senegal">Senegal</option> 
-                            <option value="Serbia and Montenegro">Serbia and Montenegro</option> 
-                            <option value="Seychelles">Seychelles</option> 
-                            <option value="Sierra Leone">Sierra Leone</option> 
-                            <option value="Singapore">Singapore</option> 
-                            <option value="Slovakia">Slovakia</option> 
-                            <option value="Slovenia">Slovenia</option> 
-                            <option value="Solomon Islands">Solomon Islands</option> 
-                            <option value="Somalia">Somalia</option> 
-                            <option value="South Africa">South Africa</option> 
-                            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option> 
-                            <option value="Spain">Spain</option> 
-                            <option value="Sri Lanka">Sri Lanka</option> 
-                            <option value="Sudan">Sudan</option> 
-                            <option value="Suriname">Suriname</option> 
-                            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option> 
-                            <option value="Swaziland">Swaziland</option> 
-                            <option value="Sweden">Sweden</option> 
-                            <option value="Switzerland">Switzerland</option> 
-                            <option value="Syrian Arab Republic">Syrian Arab Republic</option> 
-                            <option value="Taiwan, Province of China">Taiwan, Province of China</option> 
-                            <option value="Tajikistan">Tajikistan</option> 
-                            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option> 
-                            <option value="Thailand">Thailand</option> 
-                            <option value="Timor-leste">Timor-leste</option> 
-                            <option value="Togo">Togo</option> 
-                            <option value="Tokelau">Tokelau</option> 
-                            <option value="Tonga">Tonga</option> 
-                            <option value="Trinidad and Tobago">Trinidad and Tobago</option> 
-                            <option value="Tunisia">Tunisia</option> 
-                            <option value="Turkey">Turkey</option> 
-                            <option value="Turkmenistan">Turkmenistan</option> 
-                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option> 
-                            <option value="Tuvalu">Tuvalu</option> 
-                            <option value="Uganda">Uganda</option> 
-                            <option value="Ukraine">Ukraine</option> 
-                            <option value="United Arab Emirates">United Arab Emirates</option> 
-                            <option value="United Kingdom">United Kingdom</option> 
-                            <option value="United States">United States</option> 
-                            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option> 
-                            <option value="Uruguay">Uruguay</option> 
-                            <option value="Uzbekistan">Uzbekistan</option> 
-                            <option value="Vanuatu">Vanuatu</option> 
-                            <option value="Venezuela">Venezuela</option> 
-                            <option value="Viet Nam">Viet Nam</option> 
-                            <option value="Virgin Islands, British">Virgin Islands, British</option> 
-                            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option> 
-                            <option value="Wallis and Futuna">Wallis and Futuna</option> 
-                            <option value="Western Sahara">Western Sahara</option> 
-                            <option value="Yemen">Yemen</option> 
-                            <option value="Zambia">Zambia</option> 
-                            <option value="Zimbabwe">Zimbabwe</option>
-                       </select>
-                    </div>
                 </div>
             </div>
         </div>
@@ -388,238 +145,6 @@
                        </div>
                        <div class="shadow js-shadow"></div>
                    </a>
-
-                    <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-2.jpg)">
-                       <div class="tour_item_top">
-                           <p class="country">
-                               <span>所在地</span>
-                           </p>
-                           <div class="add_bookmark fav-button added">
-                               <i class="is-added bouncy"></i>
-                               <i class="not-added bouncy"></i>
-                               <span class="fav-overlay"></span>
-                           </div>
-                       </div>
-                       <div class="tour_item_bottom">
-                           <h3 class="_title">景点2</h3>
-                           <div class="_info">
-                               <div class="_info_left">
-                                   <div class="days">幸福指数 |</div>
-                                   <div class="cost">98.12</div>
-                               </div>
-                               <div class="_info_right">
-                                   <div class="rating-stars">
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star"></div>
-                                       <div class="star"></div>
-                                   </div>
-                                   <div class="rating-text">13892 点击</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="shadow js-shadow"></div>
-                   </a>
-
-                   <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-4.jpg)">
-                       <div class="tour_item_top">
-                           <p class="country">
-                               <span>The biggest part of the world</span>
-                           </p>
-                           <div class="add_bookmark fav-button added">
-                               <i class="is-added bouncy"></i>
-                               <i class="not-added bouncy"></i>
-                               <span class="fav-overlay"></span>
-                           </div>
-                       </div>
-                       <div class="tour_item_bottom">
-                           <h3 class="_title">Asia</h3>
-                           <div class="_info">
-                               <div class="_info_left">
-                                   <div class="days">5 days |</div>
-                                   <div class="cost">from $256</div>
-                               </div>
-                               <div class="_info_right">
-                                   <div class="rating-stars">
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star"></div>
-                                       <div class="star"></div>
-                                   </div>
-                                   <div class="rating-text">5 reviews</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="shadow js-shadow"></div>
-                   </a>
-
-                   <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-3.jpg)">
-                       <div class="tour_item_top">
-                           <p class="country">
-                               <span>Iceland</span>
-                           </p>
-                           <div class="add_bookmark fav-button added">
-                               <i class="is-added bouncy"></i>
-                               <i class="not-added bouncy"></i>
-                               <span class="fav-overlay"></span>
-                           </div>
-                       </div>
-                       <div class="tour_item_bottom">
-                           <h3 class="_title">Reykjavik</h3>
-                           <div class="_info">
-                               <div class="_info_left">
-                                   <div class="days">5 days |</div>
-                                   <div class="cost">from $356</div>
-                               </div>
-                               <div class="_info_right">
-                                   <div class="rating-stars">
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star"></div>
-                                       <div class="star"></div>
-                                   </div>
-                                   <div class="rating-text">10 reviews</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="shadow js-shadow"></div>
-                   </a>
-
-                   <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-5.jpg)">
-                       <div class="tour_item_top">
-                           <p class="country">
-                               <span>Japan</span>
-                           </p>
-                           <div class="add_bookmark fav-button added">
-                               <i class="is-added bouncy"></i>
-                               <i class="not-added bouncy"></i>
-                               <span class="fav-overlay"></span>
-                           </div>
-                       </div>
-                       <div class="tour_item_bottom">
-                           <h3 class="_title">Unforgettable trip to Japan</h3>
-                           <div class="_info">
-                               <div class="_info_left">
-                                   <div class="days">5 days |</div>
-                                   <div class="cost">from $900</div>
-                               </div>
-                               <div class="_info_right">
-                                   <div class="rating-stars">
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star"></div>
-                                       <div class="star"></div>
-                                   </div>
-                                   <div class="rating-text">5 reviews</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="shadow js-shadow"></div>
-                   </a>
-
-                   <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-6.jpg)">
-                       <div class="tour_item_top">
-                           <p class="country">
-                               <span>Australia</span>
-                           </p>
-                           <div class="add_bookmark fav-button added">
-                               <i class="is-added bouncy"></i>
-                               <i class="not-added bouncy"></i>
-                               <span class="fav-overlay"></span>
-                           </div>
-                       </div>
-                       <div class="tour_item_bottom">
-                           <h3 class="_title">Sydney the opera house</h3>
-                           <div class="_info">
-                               <div class="_info_left">
-                                   <div class="days">5 days |</div>
-                                   <div class="cost">from $400</div>
-                               </div>
-                               <div class="_info_right">
-                                   <div class="rating-stars">
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star"></div>
-                                       <div class="star"></div>
-                                   </div>
-                                   <div class="rating-text">5 reviews</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="shadow js-shadow"></div>
-                   </a>
-                   
-                   <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-7.jpg)">
-                       <div class="tour_item_top">
-                           <p class="country">
-                               <span>United States of America</span>
-                           </p>
-                           <div class="add_bookmark fav-button added">
-                               <i class="is-added bouncy"></i>
-                               <i class="not-added bouncy"></i>
-                               <span class="fav-overlay"></span>
-                           </div>
-                       </div>
-                       <div class="tour_item_bottom">
-                           <h3 class="_title">Epcot Center Drive, Orlando</h3>
-                           <div class="_info">
-                               <div class="_info_left">
-                                   <div class="days">5 days |</div>
-                                   <div class="cost">from $400</div>
-                               </div>
-                               <div class="_info_right">
-                                   <div class="rating-stars">
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star"></div>
-                                       <div class="star"></div>
-                                   </div>
-                                   <div class="rating-text">5 reviews</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="shadow js-shadow"></div>
-                   </a>
-                   
-                   <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-8.jpg)">
-                       <div class="tour_item_top">
-                           <p class="country">
-                               <span>United States of America</span>
-                           </p>
-                           <div class="add_bookmark fav-button added">
-                               <i class="is-added bouncy"></i>
-                               <i class="not-added bouncy"></i>
-                               <span class="fav-overlay"></span>
-                           </div>
-                       </div>
-                       <div class="tour_item_bottom">
-                           <h3 class="_title">Cloud gate, Chicago, Illinois</h3>
-                           <div class="_info">
-                               <div class="_info_left">
-                                   <div class="days">5 days |</div>
-                                   <div class="cost">from $240</div>
-                               </div>
-                               <div class="_info_right">
-                                   <div class="rating-stars">
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star filled"></div>
-                                       <div class="star"></div>
-                                       <div class="star"></div>
-                                   </div>
-                                   <div class="rating-text">5 reviews</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="shadow js-shadow"></div>
-                   </a>
-
                 </div>
                 <div class="pagination">
                     <a class="arrow prev"></a>
@@ -635,6 +160,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="instagram_posts">
            <div class="posts">
                <a class="post">
@@ -684,366 +211,58 @@
                </a>
            </div>
        </div>
-    <div class="footer">
-        <div class="wrap">
-            <div class="wrap_float">
-                <div class="footer_top">
-                    <div class="left">
-                        <div class="col">
-                            <div class="_title m_title">排行</div>
-                            <ul>
-                                <li><a href="happiness.html">基于空间聚类和表情识别</a></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <div class="_title m_title">趋势</div>
-                            <ul>
-                             <li><a href="popular.html">基于景点收藏量和点击量</a></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <div class="_title m_title">浏览</div>
-                            <ul>
-                             <li><a href="browse.html">随便看看？</a></li>
-                            </ul>
-                        </div>
+<div class="footer">
+    <div class="wrap">
+        <div class="wrap_float">
+            <div class="footer_top">
+                <div class="left">
+                    <div class="col">
+                        <div class="_title m_title">排行</div>
+                        <ul>
+                            <li><a href="happiness.html">基于空间聚类和表情识别</a></li>
+                        </ul>
                     </div>
-                    <div class="right">
-                        <div class="_title">关于我们</div>
-                        <div class="contacts_info">
-                            <div class="tel">
-                                <a href="">+ 15827615179</a>
-                                <p>支持我们</p>
-                            </div>
-                            <div class="email">
-                                <a href="mailto:hikarinoda@163.com">hikarinoda@163.com</a>
-                                <p>向我们反馈</p>
-                            </div>
+                    <div class="col">
+                        <div class="_title m_title">趋势</div>
+                        <ul>
+                            <li><a href="popular.html">基于景点收藏量和点击量</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <div class="_title m_title">浏览</div>
+                        <ul>
+                            <li><a href="browse.html">随便看看？</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="_title">关于我们</div>
+                    <div class="contacts_info">
+                        <div class="tel">
+                            <a href="">+ 15827615179</a>
+                            <p>支持我们</p>
+                        </div>
+                        <div class="email">
+                            <a href="mailto:hikarinoda@163.com">hikarinoda@163.com</a>
+                            <p>向我们反馈</p>
                         </div>
                     </div>
                 </div>
-                <div class="footer_bottom">
-                    <div class="left">
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                    <div class="right">
-                        <a href="index.html">Where To Go ?</a>
-                    </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="left">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="right">
+                    <a href="index.html">Where To Go ?</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    </div>
-    
-    <div class="modal_search" id="modal_search">
-        <div class="close"></div>
-        <div class="search-tour">
-           <div class="wrap">
-               <div class="wrap_float">
-                   <div class="search-form">
-                       <div class="destination-col">
-                           <div class="label">Destination</div>
-                           <div class="select_wrap">
-                               <select>
-                                   <option value="Destination" disabled selected>Destination</option>
-                                   <option value="United States">United States</option> 
-                                    <option value="United Kingdom">United Kingdom</option> 
-                                    <option value="Afghanistan">Afghanistan</option> 
-                                    <option value="Albania">Albania</option> 
-                                    <option value="Algeria">Algeria</option> 
-                                    <option value="American Samoa">American Samoa</option> 
-                                    <option value="Andorra">Andorra</option> 
-                                    <option value="Angola">Angola</option> 
-                                    <option value="Anguilla">Anguilla</option> 
-                                    <option value="Antarctica">Antarctica</option> 
-                                    <option value="Antigua and Barbuda">Antigua and Barbuda</option> 
-                                    <option value="Argentina">Argentina</option> 
-                                    <option value="Armenia">Armenia</option> 
-                                    <option value="Aruba">Aruba</option> 
-                                    <option value="Australia">Australia</option> 
-                                    <option value="Austria">Austria</option> 
-                                    <option value="Azerbaijan">Azerbaijan</option> 
-                                    <option value="Bahamas">Bahamas</option> 
-                                    <option value="Bahrain">Bahrain</option> 
-                                    <option value="Bangladesh">Bangladesh</option> 
-                                    <option value="Barbados">Barbados</option> 
-                                    <option value="Belarus">Belarus</option> 
-                                    <option value="Belgium">Belgium</option> 
-                                    <option value="Belize">Belize</option> 
-                                    <option value="Benin">Benin</option> 
-                                    <option value="Bermuda">Bermuda</option> 
-                                    <option value="Bhutan">Bhutan</option> 
-                                    <option value="Bolivia">Bolivia</option> 
-                                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> 
-                                    <option value="Botswana">Botswana</option> 
-                                    <option value="Bouvet Island">Bouvet Island</option> 
-                                    <option value="Brazil">Brazil</option> 
-                                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option> 
-                                    <option value="Brunei Darussalam">Brunei Darussalam</option> 
-                                    <option value="Bulgaria">Bulgaria</option> 
-                                    <option value="Burkina Faso">Burkina Faso</option> 
-                                    <option value="Burundi">Burundi</option> 
-                                    <option value="Cambodia">Cambodia</option> 
-                                    <option value="Cameroon">Cameroon</option> 
-                                    <option value="Canada">Canada</option> 
-                                    <option value="Cape Verde">Cape Verde</option> 
-                                    <option value="Cayman Islands">Cayman Islands</option> 
-                                    <option value="Central African Republic">Central African Republic</option> 
-                                    <option value="Chad">Chad</option> 
-                                    <option value="Chile">Chile</option> 
-                                    <option value="China">China</option> 
-                                    <option value="Christmas Island">Christmas Island</option> 
-                                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option> 
-                                    <option value="Colombia">Colombia</option> 
-                                    <option value="Comoros">Comoros</option> 
-                                    <option value="Congo">Congo</option> 
-                                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option> 
-                                    <option value="Cook Islands">Cook Islands</option> 
-                                    <option value="Costa Rica">Costa Rica</option> 
-                                    <option value="Cote D'ivoire">Cote D'ivoire</option> 
-                                    <option value="Croatia">Croatia</option> 
-                                    <option value="Cuba">Cuba</option> 
-                                    <option value="Cyprus">Cyprus</option> 
-                                    <option value="Czech Republic">Czech Republic</option> 
-                                    <option value="Denmark">Denmark</option> 
-                                    <option value="Djibouti">Djibouti</option> 
-                                    <option value="Dominica">Dominica</option> 
-                                    <option value="Dominican Republic">Dominican Republic</option> 
-                                    <option value="Ecuador">Ecuador</option> 
-                                    <option value="Egypt">Egypt</option> 
-                                    <option value="El Salvador">El Salvador</option> 
-                                    <option value="Equatorial Guinea">Equatorial Guinea</option> 
-                                    <option value="Eritrea">Eritrea</option> 
-                                    <option value="Estonia">Estonia</option> 
-                                    <option value="Ethiopia">Ethiopia</option> 
-                                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option> 
-                                    <option value="Faroe Islands">Faroe Islands</option> 
-                                    <option value="Fiji">Fiji</option> 
-                                    <option value="Finland">Finland</option> 
-                                    <option value="France">France</option> 
-                                    <option value="French Guiana">French Guiana</option> 
-                                    <option value="French Polynesia">French Polynesia</option> 
-                                    <option value="French Southern Territories">French Southern Territories</option> 
-                                    <option value="Gabon">Gabon</option> 
-                                    <option value="Gambia">Gambia</option> 
-                                    <option value="Georgia">Georgia</option> 
-                                    <option value="Germany">Germany</option> 
-                                    <option value="Ghana">Ghana</option> 
-                                    <option value="Gibraltar">Gibraltar</option> 
-                                    <option value="Greece">Greece</option> 
-                                    <option value="Greenland">Greenland</option> 
-                                    <option value="Grenada">Grenada</option> 
-                                    <option value="Guadeloupe">Guadeloupe</option> 
-                                    <option value="Guam">Guam</option> 
-                                    <option value="Guatemala">Guatemala</option> 
-                                    <option value="Guinea">Guinea</option> 
-                                    <option value="Guinea-bissau">Guinea-bissau</option> 
-                                    <option value="Guyana">Guyana</option> 
-                                    <option value="Haiti">Haiti</option> 
-                                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option> 
-                                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option> 
-                                    <option value="Honduras">Honduras</option> 
-                                    <option value="Hong Kong">Hong Kong</option> 
-                                    <option value="Hungary">Hungary</option> 
-                                    <option value="Iceland">Iceland</option> 
-                                    <option value="India">India</option> 
-                                    <option value="Indonesia">Indonesia</option> 
-                                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option> 
-                                    <option value="Iraq">Iraq</option> 
-                                    <option value="Ireland">Ireland</option> 
-                                    <option value="Israel">Israel</option> 
-                                    <option value="Italy">Italy</option> 
-                                    <option value="Jamaica">Jamaica</option> 
-                                    <option value="Japan">Japan</option> 
-                                    <option value="Jordan">Jordan</option> 
-                                    <option value="Kazakhstan">Kazakhstan</option> 
-                                    <option value="Kenya">Kenya</option> 
-                                    <option value="Kiribati">Kiribati</option> 
-                                    <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option> 
-                                    <option value="Korea, Republic of">Korea, Republic of</option> 
-                                    <option value="Kuwait">Kuwait</option> 
-                                    <option value="Kyrgyzstan">Kyrgyzstan</option> 
-                                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option> 
-                                    <option value="Latvia">Latvia</option> 
-                                    <option value="Lebanon">Lebanon</option> 
-                                    <option value="Lesotho">Lesotho</option> 
-                                    <option value="Liberia">Liberia</option> 
-                                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option> 
-                                    <option value="Liechtenstein">Liechtenstein</option> 
-                                    <option value="Lithuania">Lithuania</option> 
-                                    <option value="Luxembourg">Luxembourg</option> 
-                                    <option value="Macao">Macao</option> 
-                                    <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option> 
-                                    <option value="Madagascar">Madagascar</option> 
-                                    <option value="Malawi">Malawi</option> 
-                                    <option value="Malaysia">Malaysia</option> 
-                                    <option value="Maldives">Maldives</option> 
-                                    <option value="Mali">Mali</option> 
-                                    <option value="Malta">Malta</option> 
-                                    <option value="Marshall Islands">Marshall Islands</option> 
-                                    <option value="Martinique">Martinique</option> 
-                                    <option value="Mauritania">Mauritania</option> 
-                                    <option value="Mauritius">Mauritius</option> 
-                                    <option value="Mayotte">Mayotte</option> 
-                                    <option value="Mexico">Mexico</option> 
-                                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option> 
-                                    <option value="Moldova, Republic of">Moldova, Republic of</option> 
-                                    <option value="Monaco">Monaco</option> 
-                                    <option value="Mongolia">Mongolia</option> 
-                                    <option value="Montserrat">Montserrat</option> 
-                                    <option value="Morocco">Morocco</option> 
-                                    <option value="Mozambique">Mozambique</option> 
-                                    <option value="Myanmar">Myanmar</option> 
-                                    <option value="Namibia">Namibia</option> 
-                                    <option value="Nauru">Nauru</option> 
-                                    <option value="Nepal">Nepal</option> 
-                                    <option value="Netherlands">Netherlands</option> 
-                                    <option value="Netherlands Antilles">Netherlands Antilles</option> 
-                                    <option value="New Caledonia">New Caledonia</option> 
-                                    <option value="New Zealand">New Zealand</option> 
-                                    <option value="Nicaragua">Nicaragua</option> 
-                                    <option value="Niger">Niger</option> 
-                                    <option value="Nigeria">Nigeria</option> 
-                                    <option value="Niue">Niue</option> 
-                                    <option value="Norfolk Island">Norfolk Island</option> 
-                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option> 
-                                    <option value="Norway">Norway</option> 
-                                    <option value="Oman">Oman</option> 
-                                    <option value="Pakistan">Pakistan</option> 
-                                    <option value="Palau">Palau</option> 
-                                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option> 
-                                    <option value="Panama">Panama</option> 
-                                    <option value="Papua New Guinea">Papua New Guinea</option> 
-                                    <option value="Paraguay">Paraguay</option> 
-                                    <option value="Peru">Peru</option> 
-                                    <option value="Philippines">Philippines</option> 
-                                    <option value="Pitcairn">Pitcairn</option> 
-                                    <option value="Poland">Poland</option> 
-                                    <option value="Portugal">Portugal</option> 
-                                    <option value="Puerto Rico">Puerto Rico</option> 
-                                    <option value="Qatar">Qatar</option> 
-                                    <option value="Reunion">Reunion</option> 
-                                    <option value="Romania">Romania</option> 
-                                    <option value="Russian Federation">Russian Federation</option> 
-                                    <option value="Rwanda">Rwanda</option> 
-                                    <option value="Saint Helena">Saint Helena</option> 
-                                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
-                                    <option value="Saint Lucia">Saint Lucia</option> 
-                                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option> 
-                                    <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option> 
-                                    <option value="Samoa">Samoa</option> 
-                                    <option value="San Marino">San Marino</option> 
-                                    <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
-                                    <option value="Saudi Arabia">Saudi Arabia</option> 
-                                    <option value="Senegal">Senegal</option> 
-                                    <option value="Serbia and Montenegro">Serbia and Montenegro</option> 
-                                    <option value="Seychelles">Seychelles</option> 
-                                    <option value="Sierra Leone">Sierra Leone</option> 
-                                    <option value="Singapore">Singapore</option> 
-                                    <option value="Slovakia">Slovakia</option> 
-                                    <option value="Slovenia">Slovenia</option> 
-                                    <option value="Solomon Islands">Solomon Islands</option> 
-                                    <option value="Somalia">Somalia</option> 
-                                    <option value="South Africa">South Africa</option> 
-                                    <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option> 
-                                    <option value="Spain">Spain</option> 
-                                    <option value="Sri Lanka">Sri Lanka</option> 
-                                    <option value="Sudan">Sudan</option> 
-                                    <option value="Suriname">Suriname</option> 
-                                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option> 
-                                    <option value="Swaziland">Swaziland</option> 
-                                    <option value="Sweden">Sweden</option> 
-                                    <option value="Switzerland">Switzerland</option> 
-                                    <option value="Syrian Arab Republic">Syrian Arab Republic</option> 
-                                    <option value="Taiwan, Province of China">Taiwan, Province of China</option> 
-                                    <option value="Tajikistan">Tajikistan</option> 
-                                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option> 
-                                    <option value="Thailand">Thailand</option> 
-                                    <option value="Timor-leste">Timor-leste</option> 
-                                    <option value="Togo">Togo</option> 
-                                    <option value="Tokelau">Tokelau</option> 
-                                    <option value="Tonga">Tonga</option> 
-                                    <option value="Trinidad and Tobago">Trinidad and Tobago</option> 
-                                    <option value="Tunisia">Tunisia</option> 
-                                    <option value="Turkey">Turkey</option> 
-                                    <option value="Turkmenistan">Turkmenistan</option> 
-                                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option> 
-                                    <option value="Tuvalu">Tuvalu</option> 
-                                    <option value="Uganda">Uganda</option> 
-                                    <option value="Ukraine">Ukraine</option> 
-                                    <option value="United Arab Emirates">United Arab Emirates</option> 
-                                    <option value="United Kingdom">United Kingdom</option> 
-                                    <option value="United States">United States</option> 
-                                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option> 
-                                    <option value="Uruguay">Uruguay</option> 
-                                    <option value="Uzbekistan">Uzbekistan</option> 
-                                    <option value="Vanuatu">Vanuatu</option> 
-                                    <option value="Venezuela">Venezuela</option> 
-                                    <option value="Viet Nam">Viet Nam</option> 
-                                    <option value="Virgin Islands, British">Virgin Islands, British</option> 
-                                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option> 
-                                    <option value="Wallis and Futuna">Wallis and Futuna</option> 
-                                    <option value="Western Sahara">Western Sahara</option> 
-                                    <option value="Yemen">Yemen</option> 
-                                    <option value="Zambia">Zambia</option> 
-                                    <option value="Zimbabwe">Zimbabwe</option>
-                               </select>
-                           </div>
-                       </div>
-                       <div class="date-col">
-                           <div class="label">Check In</div>
-                           <div class="date_div">
-                               <input type="text" class="js_calendar desctop-input">
-                               <input type="date" class="mobile-input">
-                               <div class="day">21</div>
-                               <div class="date_div_right">
-                                   <div class="month">December</div>
-                                   <div class="year">2019</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="date-col">
-                           <div class="label">Check Out</div>
-                           <div class="date_div">
-                               <input type="text" class="js_calendar desctop-input">
-                               <input type="date" class="mobile-input">
-                               <div class="day">21</div>
-                               <div class="date_div_right">
-                                   <div class="month">December</div>
-                                   <div class="year">2019</div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="num-col">
-                           <div class="label">Aduld</div>
-                           <div class="num_wrap">
-                               <div class="buttons">
-                                   <button class="plus"></button>
-                                   <button class="minus"></button>
-                               </div>
-                               <input type="number" class="val js_num" value="3" min="0" max="99">
-                           </div>
-                       </div>
-                       <div class="num-col last">
-                           <div class="label">Children</div>
-                           <div class="num_wrap">
-                               <div class="buttons">
-                                   <button class="plus"></button>
-                                   <button class="minus"></button>
-                               </div>
-                               <input type="number" class="val js_num" value="3" min="0" max="99">
-                           </div>
-                       </div>
-                       <button class="btn button">
-                           <span>Search</span>
-                       </button>
-                   </div>
-               </div>
-           </div>
-       </div>
-    </div>
-    
+</div>
+        
     <div class="overlay" id="overlay"></div>
 
     <div class="popup login" id="login">
@@ -1240,11 +459,13 @@
     </div>
     
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/lightgallery.js"></script> 
 	<script src="js/jquery.mousewheel.min.js"></script> 
     <script src="js/slick.min.js"></script>
     <script src="js/hammer.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/func.js"></script>
 </body>
 </html>

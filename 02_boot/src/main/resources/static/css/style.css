@@ -279,6 +279,7 @@ input:focus {
 }
 input[type="text"],
 input[type="email"],
+input[type="search"]，
 input[type="tel"],
 input[type="password"],
 textarea {
@@ -1609,7 +1610,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   z-index: 2;
 }
 .top_panel .menu_wrap {
-  width: 1090px;
+  width: 900px;
 }
 .top_panel .wrap_float {
   position: relative;
@@ -1736,16 +1737,36 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   color: #FF3B00;
 }
 .top_panel .left {
-  width: 350px;
-  padding-right: 40px;
+  width: 500px;
+  padding-right: 20px;
 }
+
+.top_panel .left .input_wrap .input {
+  height: 58px;
+  display: block;
+  float: left;
+  background: none;
+  width: 100%;
+  border: 0;
+  font-size: 21px;
+  color: #fff;
+  padding: 0 28px;
+}
+.top_panel .left .input_wrap {
+  height: 58px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  width: 200px;
+}
+
 .top_panel .left .search_btn {
   background: rgba(255, 255, 255, 0.33);
   border-radius: 50%;
   width: 48px;
   height: 48px;
   position: relative;
-  margin-right: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .top_panel .left .search_btn span {
   display: none;
@@ -1796,6 +1817,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   width: auto;
   display: block;
   float: left;
+  padding-right: 20px;
 }
 .top_panel .left .logo img {
   height: 100%;
@@ -2128,7 +2150,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   transition: all 0.4s ease-out;
 }
 .main_slider .slider_wrap .slide .slide_content .buttons .btn {
-  background: #D03000;
+  background: rgba(255, 30, 0, 0.513);
   height: 50px;
   line-height: 50px;
   width: auto;
@@ -3697,7 +3719,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   margin-left: -12px;
 }
 .modal_search {
-  background: rgba(0, 48, 208, 0.89);
+  background: rgba(166, 170, 182, 0.425);
   position: fixed;
   top: 0;
   left: 0;
@@ -3810,7 +3832,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
     bottom: 70px;
   }
   .top_panel .menu_wrap {
-    width: 1004px;
+    width: 900px;
   }
 }
 @media screen and (max-width: 1520px) {
@@ -6144,6 +6166,15 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   margin-left: -9px;
   content: '';
 }
+
+.travel-list .posts .item_right .info .rating-text {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.37);
+  line-height: 40px;
+  width: auto;
+  padding-left: 380px;
+}
+
 .travel-list .posts .item_right .item_title {
   font-size: 33px;
   font-family: 'Prata', serif;
@@ -6161,7 +6192,9 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 0 44px 30px;
+  padding-bottom: 30px;
+  padding-left: 44px;
+  padding-right: 20px;
 }
 .travel-list .posts .item_right .info .days {
   font-size: 21px;
