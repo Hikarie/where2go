@@ -92,6 +92,7 @@
         <!--是否使用实际列名,默认为false-->
         <!--<property name="useActualColumnNames" value="false" />-->
         <!--        </table>-->
+<<<<<<< HEAD
         <!--        <table schema="" tableName="collection">-->
         <!--            &lt;!&ndash;               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"&ndash;&gt;-->
         <!--            &lt;!&ndash;               enableUpdateByExample="false" selectByExampleQueryId="false">&ndash;&gt;-->
@@ -101,14 +102,32 @@
         <table schema="" tableName="ratings">
             <!--            enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
             <!--            enableUpdateByExample="false" selectByExampleQueryId="false">-->
+=======
+<!--        <table schema="" tableName="collection">-->
+<!--            &lt;!&ndash;               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;               enableUpdateByExample="false" selectByExampleQueryId="false">&ndash;&gt;-->
+<!--            &lt;!&ndash;            &lt;!&ndash;是否使用实际列名,默认为false&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;            &lt;!&ndash;<property name="useActualColumnNames" value="false" />&ndash;&gt;&ndash;&gt;-->
+<!--        </table>-->
+        <table schema="" tableName="ratings">
+<!--            enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+<!--            enableUpdateByExample="false" selectByExampleQueryId="false">-->
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
             <!--是否使用实际列名,默认为false-->
             <!--<property name="useActualColumnNames" value="false" />-->
         </table>
         <table schema="" tableName="recommend">
+<<<<<<< HEAD
             <!--            enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
             <!--            enableUpdateByExample="false" selectByExampleQueryId="false">-->
             <!--是否使用实际列名,默认为false-->
             <!--<property name="useActualColumnNames" value="false" />-->
+=======
+            <!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+            <!--               enableUpdateByExample="false" selectByExampleQueryId="false">-->
+            <!--            &lt;!&ndash;是否使用实际列名,默认为false&ndash;&gt;-->
+            <!--            &lt;!&ndash;<property name="useActualColumnNames" value="false" />&ndash;&gt;-->
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
         </table>
         <!--        <table schema="" tableName="collection">-->
         <!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->

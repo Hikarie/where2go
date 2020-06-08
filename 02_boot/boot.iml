@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+<<<<<<< HEAD
   <component name="ExternalSystem" externalSystem="Maven" />
+=======
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration />
@@ -14,6 +17,7 @@
         </sourceRoots>
       </configuration>
     </facet>
+<<<<<<< HEAD
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
@@ -26,6 +30,8 @@
         </sourceRoots>
       </configuration>
     </facet>
+=======
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />

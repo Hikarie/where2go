@@ -82,31 +82,50 @@ public class SightService {
      * @return
      */
     public SightInfo getSight(CollectionDTO dto) {
+<<<<<<< HEAD
         if (dto.getEmail() == null) {
+=======
+        if(dto.getEmail()==null){
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
             SightExample example = new SightExample();
             SightExample.Criteria criteria = example.createCriteria();
             criteria.andSightNameEqualTo(dto.getSightName());
             List<Sight> list = sightMapper.selectByExampleWithBLOBs(example);
             Sight sight = list.get(0);
             // 更新访问量
+<<<<<<< HEAD
             sight.setViews(sight.getViews() + 1);
             sightMapper.updateByExampleSelective(sight, example);
+=======
+            sight.setViews(sight.getViews()+1);
+            sightMapper.updateByExampleSelective(sight,example);
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
 //            List<SightVO> listOfSightVO = new LinkedList<>();
             SightInfo sightInfo = new SightInfo();
             BeanUtils.copyProperties(sight, sightInfo);
             return sightInfo;
+<<<<<<< HEAD
         } else {
             //获取用户
             UserExample userExample = new UserExample();
             UserExample.Criteria userCriteria = userExample.createCriteria();
             userCriteria.andEmailEqualTo(dto.getEmail());
             User user = userMapper.selectByExample(userExample).get(0);
+=======
+        }else {
+            //获取用户
+            UserExample userExample=new UserExample();
+            UserExample.Criteria userCriteria=userExample.createCriteria();
+            userCriteria.andEmailEqualTo(dto.getEmail());
+            User user=userMapper.selectByExample(userExample).get(0);
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
             //获取景点
             SightExample sightExample = new SightExample();
             SightExample.Criteria sigthCriteria = sightExample.createCriteria();
             sigthCriteria.andSightNameEqualTo(dto.getSightName());
             Sight sight = sightMapper.selectByExampleWithBLOBs(sightExample).get(0);
             // 更新评分表
+<<<<<<< HEAD
             RatingsExample ratingsExample = new RatingsExample();
             RatingsExample.Criteria ratingsCriteria = ratingsExample.createCriteria();
             ratingsCriteria.andUserIdEqualTo(user.getUserId());
@@ -116,10 +135,22 @@ public class SightService {
 
             if (ratingsList.size() == 0) {
                 Ratings ratings = new Ratings();
+=======
+            RatingsExample ratingsExample =new RatingsExample();
+            RatingsExample.Criteria ratingsCriteria=ratingsExample.createCriteria();
+            ratingsCriteria.andUserIdEqualTo(user.getUserId());
+            ratingsCriteria.andSightIdEqualTo(sight.getSightId());
+            List<Ratings> ratingsList=ratingsMapper.selectByExample(ratingsExample);
+
+
+            if(ratingsList.size()==0){
+                Ratings ratings=new Ratings();
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
                 ratings.setUserId(user.getUserId());
                 ratings.setSightId(sight.getSightId());
                 ratings.setRating(1.0f);
                 ratingsMapper.insert(ratings);
+<<<<<<< HEAD
             } else {
                 Ratings ratings = ratingsList.get(0);
                 ratings.setRating(ratings.getRating() + 1);
@@ -127,11 +158,29 @@ public class SightService {
             }
             sight.setViews(sight.getViews() + 1);
             sightMapper.updateByExampleSelective(sight, sightExample);
+=======
+            }else {
+                Ratings ratings=ratingsList.get(0);
+                ratings.setRating(ratings.getRating()+1);
+                ratingsMapper.updateByExample(ratings,ratingsExample);
+            }
+            sight.setViews(sight.getViews()+1);
+            sightMapper.updateByExampleSelective(sight,sightExample);
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
 //            List<SightVO> listOfSightVO = new LinkedList<>();
             SightInfo sightInfo = new SightInfo();
             BeanUtils.copyProperties(sight, sightInfo);
             return sightInfo;
+<<<<<<< HEAD
         }
+=======
+
+
+
+        }
+        // 获取景点的详细信息
+
+>>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
     }
 
     /**
