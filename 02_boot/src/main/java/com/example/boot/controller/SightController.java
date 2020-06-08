@@ -1,6 +1,7 @@
 package com.example.boot.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.example.boot.dto.CollectionDTO;
 import com.example.boot.dto.SightDTO;
 import com.example.boot.dto.UserDTO;
 import com.example.boot.service.SightService;
@@ -8,10 +9,7 @@ import com.example.boot.vo.SightInfo;
 import com.example.boot.vo.SightVO;
 import com.example.boot.vo.result.SucessVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -54,13 +52,13 @@ public class SightController {
     }
 
     /**
-     * GET 返回某个景点的所有信息，并更新景点访问量 +1
+     * POST 返回某个景点的所有信息，并更新景点访问量 +1
      * 需要获取用户当前的信息，如果用户处于登录状态，则修改访问量+1
-     * @param dto
+     * @param dto include: email sightName
      * @return
      */
-    @GetMapping("/information")
-    public String getInformation(@RequestBody @Valid SightDTO dto){
+    @PostMapping("/information")
+    public String getInformation(@RequestBody @Valid CollectionDTO dto){
         SightInfo sightInfo = sightService.getSight(dto);
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(sightInfo);
@@ -68,14 +66,19 @@ public class SightController {
         return res;
     }
 
+
     /**
      * GET 侧边栏展示个性化推荐的五个景点
      * @param dto
      * @return
      */
-    @GetMapping("/sidebar/personalizedSight")
+    @PostMapping("/sidebar/personalizedSight")
     public String getPersonalizedSight(@RequestBody @Valid UserDTO dto){
-        return "未完成";
+        List<SightVO> listOfSightVO=sightService.personalizedSight(dto);
+        SucessVO sucessVO = new SucessVO();
+        sucessVO.setResult(listOfSightVO);
+        String res = JSON.toJSONString(sucessVO);
+        return res;
     }
 
     /**
@@ -116,5 +119,7 @@ public class SightController {
         String res = JSON.toJSONString(sucessVO);
         return res;
     }
+
+
 
 }

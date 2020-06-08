@@ -52,7 +52,7 @@ public class UserController {
      * @param dto
      * @return
      */
-    @GetMapping("/collectionNum")
+    @PostMapping("/collectionNum")
     public String getNumbOfCollections(@RequestBody @Valid UserDTO dto) {
         long num = userService.getNumOfCollecions(dto);
         SucessVO sucessVO = new SucessVO();
@@ -73,11 +73,11 @@ public class UserController {
     }
 
     /**
-     * GET 返回收藏景点列表
+     * POST 返回收藏景点列表
      * @param dto
      * @return
      */
-    @GetMapping("/collection")
+    @PostMapping("/collectionPage")
     public String getCollection(@RequestBody @Valid UserDTO dto){
         List<SightVO> listOfSightVO = userService.getCollectionList(dto);
         SucessVO sucessVO = new SucessVO();

@@ -135,7 +135,7 @@ $(function(){
         $.ajax({
             type: 'post',
             url: '/user/collection',
-            data: data1,
+            data: JSON.stringify(data1),
             dataType: 'json',
             contentType: "application/json",
             success: function(d){ 
@@ -164,7 +164,7 @@ $(function(){
         $.ajax({
             type: 'post',
             url: '/user/collection',
-            data: data2,
+            data: JSON.stringify(data2),
             dataType: 'json',
             contentType: "application/json",
             success: function(d){
@@ -193,7 +193,7 @@ $(function(){
         $.ajax({
             type: 'post',
             url: '/user/collection',
-            data: data2,
+            data: JSON.stringify(data2),
             dataType: 'json',
             contentType: "application/json",
             success: function(d){ 
@@ -709,7 +709,7 @@ $(function(){
             contentType: "application/json",
             success: function (d) {
                 if (d.status == 1) {
-                    location.href = 'tour.html';
+                    // location.href = 'tour.html';
                     let pagebg = $(".tour_page_head");
                     pagebg[0].style.backgroundImage = "url(img/tour/" + d.result.sight_name + ".jpg)";
                     $("#litte_name").text(d.result.sight_name);

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -94,7 +94,7 @@
        <div class="main_slider js_height"> <!-- 主页slide -->
            <div class="slider_wrap" id="main_slider_wrap">
                <div class="slide">
-                   <div class="bg-img" style="background-image: url(img/main_img-1.jpg)"></div>
+                   <div class="bg-img"></div>
                    <div class="wrap">
                        <div class="wrap_float js_height">
                            <div class="slide_content">
@@ -106,7 +106,7 @@
                                    The 48th state, which became part of the United States. Located in the South-West of the country
                                </p>
                                <div class="buttons">
-                                   <a href="tour.html" class="btn button">了解更多</a>
+                                   <a class="btn button">了解更多</a>
                                    <a href="#" class="link"><span>收藏</span></a>
                                </div>
                                <div class="next_title">景点2</div>
@@ -116,7 +116,7 @@
                </div>
                
                <div class="slide">
-                   <div class="bg-img" style="background-image: url(img/main_img-2.jpg)"></div>
+                   <div class="bg-img"></div>
                    <div class="wrap">
                        <div class="wrap_float js_height">
                            <div class="slide_content">
@@ -128,7 +128,7 @@
                                    The largest part of the world, both in territory and in population
                                </p>
                                <div class="buttons">
-                                   <a href="tour.html" class="btn button">了解更多</a>
+                                   <a class="btn button">了解更多</a>
                                    <a href="#" class="link"><span>收藏</span></a>
                                </div>
                                <div class="next_title">景点3</div>
@@ -138,7 +138,7 @@
                </div>
                
                <div class="slide">
-                   <div class="bg-img" style="background-image: url(img/main_img-3.jpg)"></div>
+                   <div class="bg-img"></div>
                    <div class="wrap">
                        <div class="wrap_float js_height">
                            <div class="slide_content">
@@ -150,7 +150,7 @@
                                    The capital and largest city as well as the community of Iceland
                                </p>
                                <div class="buttons">
-                                   <a href="tour.html" class="btn button">了解更多</a>
+                                   <a class="btn button">了解更多</a>
                                    <a href="#" class="link"><span>收藏</span></a>
                                </div>
                                <div class="next_title">景点1</div>
@@ -183,7 +183,7 @@
                    </div>
                    <div class="section_content">
                        <div class="tour-slider" id="tour-slider">
-                           <a href="tour" class="tour_item" style="background-image: url(img/tour-item-1.jpg)">
+                           <a href="tour" class="tour_item">
                                <div class="tour_item_top">
                                    <p class="country">
                                        <span>所在地
@@ -215,7 +215,7 @@
                                <div class="shadow js-shadow"></div>
                            </a>
 
-                           <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-2.jpg)">
+                           <a href="tour.html" class="tour_item">
                                <div class="tour_item_top">
                                    <p class="country">
                                        <span>所在地</span>
@@ -248,7 +248,7 @@
                                <div class="shadow js-shadow"></div>
                            </a>
 
-                           <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-3.jpg)">
+                           <a href="tour.html" class="tour_item">
                                <div class="tour_item_top">
                                    <p class="country">
                                        <span>所在地</span>
@@ -281,7 +281,7 @@
                                <div class="shadow js-shadow"></div>
                            </a>
                            
-                           <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-4.jpg)">
+                           <a href="tour.html" class="tour_item">
                                <div class="tour_item_top">
                                    <p class="country">
                                        <span>所在地</span>
@@ -314,7 +314,7 @@
                                <div class="shadow js-shadow"></div>
                            </a>
 
-                           <a href="tour.html" class="tour_item" style="background-image: url(img/tour-item-5.jpg)">
+                           <a href="tour.html" class="tour_item">
                             <div class="tour_item_top">
                                 <p class="country">
                                     <span>所在地</span>
@@ -651,12 +651,10 @@
                         使用邮箱登录
                     </div>
                     <div class="form">
-                        <form id="login_form">
                             <input type="text" class="input" name="email" placeholder="邮箱">
-                            <input type="text" class="input" name="password" placeholder="密码">
+                            <input type="password" class="input" name="password" placeholder="密码">
                         <button class="submit button", id="login_submit">登录</button>
                         <a href="#" class="link">忘记密码</a>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -683,7 +681,7 @@
                             <input type="email" class="input" name="reg_email" placeholder="邮箱地址">
                             <input type="password" class="input" name="reg_password" placeholder="密码">
                             <input type="password" class="input" placeholder="确认密码">
-                            <button class="submit button js-submit">注册</button>
+                            <button class="submit button js-submit" id="reg_button">注册</button>
                     </div>
                 </div>
             </div>
@@ -742,86 +740,29 @@
         </div>
         <div class="close"></div>
     </div>
-    
-    
-    <div class="popup contact-us" id="contact-us">
-        <div class="scroll">
-            <div class="scroll_wrap">
-                <div class="popup-head">
-                    <div class="title">Contact Us</div>
-                </div>
-                <div class="popup-body">
-                    <div class="subtitle">
-                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-                    </div>
-                    <div class="form">
-                        <input type="text" class="input" placeholder="Name">
-                        <input type="email" class="input" placeholder="Email">
-                        <input type="text" class="input" placeholder="Phone">
-                        <textarea class="textarea" placeholder="Your Massage"></textarea>
-                        <button class="submit button js-submit">Send Massage</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="close"></div>
-    </div>
-    
-    <div class="popup book-now-popup" id="book-now">
-        <div class="scroll">
-            <div class="scroll_wrap">
-                <div class="popup-head">
-                    <div class="title">Book Now</div>
-                </div>
-                <div class="popup-body">
-                    <div class="tour-title">
-                        <div class="img">
-                            <img src="img/tour-item-3.jpg" alt="">
-                        </div>
-                        <div class="tour-name">
-                            Tour to the Arctic is an exotic journey on the verge of extreme
-                        </div>
-                    </div>
-                    <div class="tour-info">
-                        <div class="col">
-                            <div class="label">Check In</div>
-                            <div class="date">
-                                <div class="day">09</div>
-                                <div class="month">May</div>
-                                <div class="year">2019</div>
-                            </div>
-                            <div class="label">Aduld: <span>3</span></div>
-                        </div>
-                        <div class="col">
-                            <div class="label">Check Out</div>
-                            <div class="date">
-                                <div class="day">09</div>
-                                <div class="month">May</div>
-                                <div class="year">2019</div>
-                            </div>
-                            <div class="label">Children: <span>0</span></div>
-                        </div>
-                    </div>
-                    <div class="form">
-                        <input type="text" class="input" placeholder="Your First Name">
-                        <input type="text" class="input" placeholder="Your Last Name">
-                        <input type="email" class="input" placeholder="Your Email">
-                        <input type="tel" class="input" placeholder="Your Number Phone">
-                        <textarea class="textarea" placeholder="Where are your address?"></textarea>
-                        <textarea class="textarea" placeholder="Note:"></textarea>
-                        <button class="submit button js-submit">Book Now | <b>$356</b></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="close"></div>
-    </div>
+
     
     <div class="popup success-popup" id="contact-us-success">
         <div class="scroll">
             <div class="scroll_wrap">
                 <div class="popup-head">
-                    <div class="title">注册成功！</div>
+                    <div class="title">成功！</div>
+                </div>
+                <div class="popup-body">
+                    <div class="subtitle">
+                        立即回到主页……
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+
+    <div class="popup failed-popup" id="contact-us-failed">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="popup-head">
+                    <div class="title">失败！</div>
                 </div>
                 <div class="popup-body">
                     <div class="subtitle">
