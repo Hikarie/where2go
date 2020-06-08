@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="JavaScriptSettings">
-    <option name="languageLevel" value="ES6" />
-  </component>
-=======
->>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -13,11 +8,7 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/classes" />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
-=======
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" project-jdk-name="12" project-jdk-type="JavaSDK" />
->>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
 </project>
