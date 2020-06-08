@@ -1,0 +1,853 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Where2Go</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+    
+    <meta name="msapplication-TileColor" content="#151515">
+    <meta name="theme-color" content="#151515">
+    
+ 
+</head>
+<body>
+    <div class="container">
+<div class="top_panel">
+           <div class="wrap">
+               <div class="wrap_float">
+                   <div class="left">
+                       <a href="index.html" class="logo"> <!-- 网站logo -->
+                           <img src="img/IMG_0427.PNG" alt="">  
+                       </a>
+                       <div class="search_btn"></div>
+                   </div>
+                   <div class="menu_wrap" id="menu_wrap">
+                       <div class="scroll">
+                           <div class="center">
+                               <div class="menu">
+                                   <ul>
+                                       <li><a href="index.html"><span>主页</span></a></li>
+                                       <li><a href="happiness.html"><span>排行</span></a></li>
+                                       <li><a href="popular.html"><span>趋势</span></a></li>
+                                       <li > 
+                                           <a href="browse.html"><span>浏览</span></a>
+                                       </li>
+                                       <li><a href="about-us.html"><span>关于我们</span></a></li>
+                                   </ul>
+
+                                   <div class="mobile_content">
+                                       <div class="currency_mob">
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="close" id="menu-close">
+                                   <span></span>
+                                   <span></span>
+                                   <span></span>
+                               </div>
+                           </div>
+                           <div class="right">
+                               <div class="tel"><a href=""><span>用户名</span></a></div>
+                               <a class="favorites-count" title="Favourites" href="favourites.html">
+                                   <div class="_counter">10</div>  <!-- 跟数据库交互！ -->
+                                   <div class="_text">收藏</div>
+                               </a>
+                           </div>
+                           <div class="user" id="userblock">
+                               <div class="userlink" id="userlink">
+<!--                                   <img src="img/userpic.jpg" alt="">-->
+                               </div>
+                               <div class="usermenu" id="usermenu">
+                                   <ul>
+                                       <li><a href="#" class="js-popup-open" data-href="#login">登录</a></li>
+                                       <li><a href="#" class="js-popup-open" data-href="#registration">注册</a></li>
+                                       <li><a href="#" class="js-popup-open" data-href="#recovery-pass">忘记密码</a></li>
+                                       <li><a href="#" class="js-popup-open" data-href="#profile-setting">设置</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="mobile_btn" id="mobile_btn">
+                       <span></span>
+                       <span></span>
+                       <span></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+<div class="tour_page left-sidebar">
+    <div class="tour_page_head" style="background-image: url(img/tour-page.jpg)">
+        <div class="breadcrumbs">
+            <div class="wrap">
+                <div class="wrap_float">
+                    <a href="#">Home</a>
+                    <span class="separator">/</span>
+                    <a href="#">Tour Page Left Sidebar</a>
+                </div>
+            </div>
+        </div>
+        <div class="header_content" id="head">
+            <div class="wrap">
+                <div class="wrap_float">
+                    <div class="top-info">
+                        <h1 class="country">Northern pole</h1>
+                        <p class="tour_title">
+                            Tour to the Arctic is an exotic journey on the verge of extreme
+                        </p>
+                        <div class="controls">
+                            <div class="add_bookmark fav-button">
+                               <i class="is-added bouncy"></i>
+                               <i class="not-added bouncy"></i>
+                               <span class="fav-overlay"></span>
+                            </div>
+                            <div class="arrows" id="tour-head-slider-arrows">
+                                <div class="arrow prev"></div>
+                                <div class="arrow next"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider_wrap">
+
+                    </div>
+                    <div class="bottom-info">
+                        <div class="bottom-info-left">
+                            <div class="search-tour">
+                                <div class="search-form">
+                                   <div class="date-col">
+                                       <div class="label">Check In</div>
+                                       <div class="date_div">
+                                           <input type="text" class="js_calendar desctop-input">
+                                           <input type="date" class="mobile-input">
+                                           <div class="day">21</div>
+                                           <div class="date_div_right">
+                                               <div class="month">December</div>
+                                               <div class="year">2019</div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="date-col">
+                                       <div class="label">Check Out</div>
+                                       <div class="date_div">
+                                           <input type="text" class="js_calendar desctop-input">
+                                           <input type="date" class="mobile-input">
+                                           <div class="day">21</div>
+                                           <div class="date_div_right">
+                                               <div class="month">December</div>
+                                               <div class="year">2019</div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="num-col">
+                                       <div class="label">Aduld</div>
+                                       <div class="num_wrap">
+                                           <div class="buttons">
+                                               <button class="plus"></button>
+                                               <button class="minus"></button>
+                                           </div>
+                                           <input type="number" class="val js_num" value="3" min="0" max="99">
+                                       </div>
+                                   </div>
+                                   <div class="num-col last">
+                                       <div class="label">Children</div>
+                                       <div class="num_wrap">
+                                           <div class="buttons">
+                                               <button class="plus"></button>
+                                               <button class="minus"></button>
+                                           </div>
+                                           <input type="number" class="val js_num" value="3" min="0" max="99">
+                                       </div>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="bottom-info-right">
+                            <div class="info">
+                                <div class="days">5 days |</div>
+                                <div class="cost">from $356</div>
+                            </div>
+                            <button class="btn button js-popup-open" data-href="#book-now">Book now</button>
+                            <div class="rating">
+                                <div class="rating-stars">
+                                   <div class="star filled"></div>
+                                   <div class="star filled"></div>
+                                   <div class="star filled"></div>
+                                   <div class="star"></div>
+                                   <div class="star"></div>
+                               </div>
+                               <div class="rating-text">10 reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tour_page_body">
+        <div class="wrap">
+            <div class="wrap_float">
+                <div class="right_content sidebar">
+                    <div class="navigation" id="sidebar-navigation">
+                        <ul>
+                            <li><a class="active" href="#head">Photo / Video</a></li>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#included">Included</a></li>
+                            <li><a href="#location">Location</a></li>
+                            <li><a href="#stories">Stories</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
+                        </ul>
+                    </div>
+                    <a class="book-now button js-popup-open" data-href="#book-now">
+                        <span>Book now</span>
+                        <span class="cost">from $356</span>
+                    </a>
+                    <div class="add-to-favorites">
+                        <div class="add_bookmark fav-button">
+                           <i class="is-added bouncy"></i>
+                           <i class="not-added bouncy"></i>
+                           <span class="fav-overlay"></span>
+                        </div>
+                        <div class="fav-text">
+                            Add to favourites
+                        </div>
+                    </div>
+                </div>
+                <div class="left_content">
+                    <div class="overview js-section content-block" id="overview">
+                        <h2 class="title">景点详情</h2>
+                        <p class="description">
+                            北京故宫是中国明清两代的皇家宫殿，旧称紫禁城，位于北京中轴线的中心。北京故宫以三大殿为中心，占地面积72万平方米，建筑面积约15万平方米，有大小宫殿七十多座，房屋九千余间。北京故宫于明成祖永乐四年（1406年）开始建设，以南京故宫为蓝本营建，到永乐十八年（1420年）建成。它是一座长方形城池，南北长961米，东西宽753米，四面围有高10米的城墙，城外有宽52米的护城河。紫禁城内的建筑分为外朝和内廷两部分。外朝的中心为太和殿、中和殿、保和殿，统称三大殿，是国家举行大典礼的地方。内廷的中心是乾清宫、交泰殿、坤宁宫，统称后三宫，是皇帝和皇后居住的正宫。北京故宫是世界上现存规模最大、保存最为完整的木质结构古建筑之一，是国家AAAAA级旅游景区，1961年被列为第一批全国重点文物保护单位;1987年被列为世界文化遗产。
+                        </p>
+                        <div class="programm" id="programm-days">
+                            <div class="day_item">
+                                <div class="day_item-head active">
+                                    <div class="preview">
+                                        <div class="image">
+                                            <img src="img/day-1.jpg" alt="">
+                                        </div>
+                                        <div class="p">Day 1</div>
+                                    </div>
+                                    <div class="_title">Transfer to hotel</div>
+                                    <div class="element"></div>
+                                </div>
+                                <div class="day_item-body" style="display: block;">
+                                    <div class="text">
+                                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                                    </div>
+                                    <div class="images">
+                                        <div class="scroll lightgallery">
+                                            <a href="img/full-slide-1.jpg" class="item">
+                                                <div class="img">
+                                                    <img src="img/full-slide-1.jpg" alt="">
+                                                </div>
+                                                <span>Signature under photo</span>
+                                            </a>
+                                            <a href="img/full-slide-2.jpg" class="item">
+                                                <div class="img">
+                                                    <img src="img/full-slide-2.jpg" alt="">
+                                                </div>
+                                                <span>Signature under photo</span>
+                                            </a>
+                                            <a href="img/full-slide-3.jpg" class="item">
+                                                <div class="img">
+                                                    <img src="img/full-slide-3.jpg" alt="">
+                                                </div>
+                                                <span>Signature under photo</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="day_item">
+                                <div class="day_item-head">
+                                    <div class="preview">
+                                        <div class="image">
+                                            <img src="img/day-2.jpg" alt="">
+                                        </div>
+                                        <div class="p">Day 2-4</div>
+                                    </div>
+                                    <div class="_title">Sightseeing tour</div>
+                                    <div class="element"></div>
+                                </div>
+                                <div class="day_item-body">
+                                    <div class="text">
+                                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="day_item">
+                                <div class="day_item-head">
+                                    <div class="preview">
+                                        <div class="image">
+                                            <img src="img/day-5.jpg" alt="">
+                                        </div>
+                                        <div class="p">Day 5</div>
+                                    </div>
+                                    <div class="_title">Free time</div>
+                                    <div class="element"></div>
+                                </div>
+                                <div class="day_item-body">
+                                    <div class="text">
+                                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="included js-section content-block" id="included">
+                        <h2 class="title">Included</h2>
+                        <ul>
+                            <li>
+                                <span class="li_title">Flight by plane</span>
+                                <span class="li_subtitle">Flight and transfer to the hotel</span>
+                            </li>
+                            <li>
+                                <span class="li_title">Wi-fi</span>
+                                <span class="li_subtitle">Free wi-fi in the reception, wi-fi in public areas</span>
+                            </li>
+                            <li>
+                                <span class="li_title">Smorgasbord</span>
+                                <span class="li_subtitle">But I must explain to you how all</span>
+                            </li>
+                            <li>
+                                <span class="li_title">Pool</span>
+                                <span class="li_subtitle">Beautiful and large swimming pool at your service</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="location js-section content-block" id="location">
+                        <h3 class="title">Location</h3>
+                        <div class="map">
+                            <iframe src="http://ditu.google.cn/maps?width=700&amp;height=440&amp;hl=en&amp;q=New%20York+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"></iframe>
+                        </div>
+                    </div>
+                    <div class="stories js-section content-block" id="stories">
+                        <div class="title_wrap">
+                            <h2 class="title">Stories</h2>
+                            <div class="link">
+                                <a href="#">All Stories</a>
+                            </div>
+                        </div>
+                        <div class="stries_slider">
+                           <div class="scroll">
+                               <a href="story.html" class="story_item" style="background-image: url(img/story-1.jpg)">
+                                   <div class="item_wrap">
+                                       <div class="_content">
+                                           <div class="flag_wrap">
+                                               <div class="flag">
+                                                   <img src="img/flag-1.svg" alt="">
+                                               </div>
+                                           </div>
+                                           <h3 class="country">Russia</h3>
+                                           <p class="text">
+                                               Amazing underwater world
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="shadow js-shadow"></div>
+                               </a>
+
+                               <a href="story.html" class="story_item" style="background-image: url(img/story-2.jpg)">
+                                   <div class="item_wrap">
+                                       <div class="_content">
+                                           <div class="flag_wrap">
+                                               <div class="flag">
+                                                   <img src="img/flag-2.svg" alt="">
+                                               </div>
+                                           </div>
+                                           <h3 class="country">Maldives</h3>
+                                           <p class="text">
+                                               Amazing underwater world
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="shadow js-shadow"></div>
+                               </a>
+
+                               <a href="story.html" class="story_item" style="background-image: url(img/story-3.jpg)">
+                                   <div class="item_wrap">
+                                       <div class="_content">
+                                           <div class="flag_wrap">
+                                               <div class="flag">
+                                                   <img src="img/flag-3.svg" alt="">
+                                               </div>
+                                           </div>
+                                           <h3 class="country">Australia</h3>
+                                           <p class="text">
+                                               Amazing underwater world
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="shadow js-shadow"></div>
+                               </a>
+
+                               <a href="story.html" class="story_item" style="background-image: url(img/story-4.jpg)">
+                                   <div class="item_wrap">
+                                       <div class="_content">
+                                           <div class="flag_wrap">
+                                               <div class="flag">
+                                                   <img src="img/flag-4.svg" alt="">
+                                               </div>
+                                           </div>
+                                           <h3 class="country">Madagascar</h3>
+                                           <p class="text">
+                                               Amazing underwater world
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="shadow js-shadow"></div>
+                               </a>
+                           </div>
+                           
+                       </div>
+                    </div>
+                    <div class="comments-block js-section" id="reviews">
+                        <div class="title_wrap">
+                            <div class="val">5.0</div>
+                            <h2 class="title">Reviews</h2>
+                            <div class="counter">12</div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment_item">
+                                <div class="comment_item_top">
+                                    <p>
+                                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. 
+                                    </p>
+                                </div>
+                                <div class="comment_item_bottom">
+                                    <div class="rating">
+                                        <div class="rating-stars">
+                                           <div class="star filled"></div>
+                                           <div class="star filled"></div>
+                                           <div class="star filled"></div>
+                                           <div class="star"></div>
+                                           <div class="star"></div>
+                                       </div>
+                                       <button class="reply">Reply</button>
+                                    </div>
+                                    <div class="author">
+                                        <div class="userpic">
+                                            <img src="img/userpic.jpg" alt="">
+                                        </div>
+                                        <div class="name">21.09.2019 by Maya Delia</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment_item answer_comment">
+                                <div class="comment_item_top">
+                                    <p>
+                                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+                                    </p>
+                                </div>
+                                <div class="comment_item_bottom">
+                                    <button class="reply">Reply</button>
+                                    <div class="author">
+                                        <div class="name">21.09.2019 by Maya Delia</div>
+                                        <div class="userpic">
+                                            <img src="img/userpic.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_item">
+                                <div class="comment_item_top">
+                                    <p>
+                                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. 
+                                    </p>
+                                    <div class="images lightgallery">
+                                        <a href="img/full-slide-1.jpg" class="img">
+                                            <img src="img/full-slide-1.jpg" alt="">
+                                        </a>
+                                        <a href="img/full-slide-2.jpgg" class="img">
+                                            <img src="img/full-slide-2.jpg" alt="">
+                                        </a>
+                                        <a href="img/full-slide-3.jpg" class="img">
+                                            <img src="img/full-slide-3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="comment_item_bottom">
+                                    <div class="rating">
+                                        <div class="rating-stars">
+                                           <div class="star filled"></div>
+                                           <div class="star filled"></div>
+                                           <div class="star filled"></div>
+                                           <div class="star"></div>
+                                           <div class="star"></div>
+                                       </div>
+                                       <button class="reply">Reply</button>
+                                    </div>
+                                    <div class="author">
+                                        <div class="userpic">
+                                            <img src="img/userpic.jpg" alt="">
+                                        </div>
+                                        <div class="name">21.09.2019 by Maya Delia</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="pagination">
+                            <a class="arrow prev"></a>
+                            <ul>
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                            <a class="arrow next"></a>
+                        </div>
+                    </div>
+                    <div class="write_comment">
+                        <div class="top">
+                            <h3 class="title">Write A Review</h3>
+                            <div class="rating">
+                                <div class="rating-text">Assigned Rating</div>
+                                <div class="rating-stars stars user-rating">
+                                   <div class="star"></div>
+                                   <div class="star"></div>
+                                   <div class="star"></div>
+                                   <div class="star"></div>
+                                   <div class="star"></div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <input type="text" class="input" placeholder="Name">
+                            <input type="text" class="input" placeholder="Email">
+                            <textarea class="textarea" placeholder="Reviews"></textarea>
+                        </div>
+                        <div class="bottom">
+                            <div class="files">
+                                <label for="file-1" class="label"><span>Add a photo</span></label>
+                                <input type="file" id="file-1">
+                                <div class="file-name"><span>IMG_5050.JPG,</span> <span>IMG_5051.JPG</span></div>
+                            </div>
+                            <button class="submit button">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="instagram_posts">
+           <div class="posts">
+               <a class="post">
+                   <div class="sq_parent">
+                       <div class="sq_wrap">
+                           <div class="sq_content">
+                               <img src="img/instagram-1.jpg" alt="">
+                           </div>
+                       </div>
+                    </div>
+               </a>
+               <a class="post">
+                   <div class="sq_parent">
+                       <div class="sq_wrap">
+                           <div class="sq_content">
+                               <img src="img/instagram-2.jpg" alt="">
+                           </div>
+                       </div>
+                    </div>
+               </a>
+               <a class="post">
+                   <div class="sq_parent">
+                       <div class="sq_wrap">
+                           <div class="sq_content">
+                               <img src="img/instagram-3.jpg" alt="">
+                           </div>
+                       </div>
+                    </div>
+               </a>
+               <a class="post">
+                   <div class="sq_parent">
+                       <div class="sq_wrap">
+                           <div class="sq_content">
+                               <img src="img/instagram-4.jpg" alt="">
+                           </div>
+                       </div>
+                    </div>
+               </a>
+               <a class="post">
+                   <div class="sq_parent">
+                       <div class="sq_wrap">
+                           <div class="sq_content">
+                               <img src="img/instagram-5.jpg" alt="">
+                           </div>
+                       </div>
+                    </div>
+               </a>
+           </div>
+       </div>
+    <div class="footer">
+        <div class="wrap">
+            <div class="wrap_float">
+                <div class="footer_top">
+                    <div class="left">
+                        <div class="col">
+                            <div class="_title m_title">排行</div>
+                            <ul>
+                                <li><a href="happiness.html">基于空间聚类和表情识别</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="_title m_title">趋势</div>
+                            <ul>
+                             <li><a href="popular.html">基于景点收藏量和点击量</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="_title m_title">浏览</div>
+                            <ul>
+                             <li><a href="browse.html">随便看看？</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="_title">关于我们</div>
+                        <div class="contacts_info">
+                            <div class="tel">
+                                <a href="">+ 15827615179</a>
+                                <p>支持我们</p>
+                            </div>
+                            <div class="email">
+                                <a href="mailto:hikarinoda@163.com">hikarinoda@163.com</a>
+                                <p>向我们反馈</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="left">
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <div class="right">
+                        <a href="index.html">Where To Go ?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup login" id="login">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="popup-head">
+                    <div class="title">登录</div>
+                    <a class="link js-popup-open" data-href="#registration">注册</a>
+                    
+                </div>
+                <div class="popup-body">
+                    <div class="subtitle">
+                        使用邮箱登录
+                    </div>
+                    <div class="form">
+                        <input type="text" class="input" placeholder="邮箱">
+                        <input type="text" class="input" placeholder="密码">
+                        <button class="submit button" id="login_submit">登录</button>
+                        <a href="#" class="link">忘记密码</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+
+   
+    <div class="popup registration" id="registration">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="popup-head">
+                    <div class="title">注册</div>
+                    <a class="link js-popup-open" data-href="#login">登录</a>
+                    
+                </div>
+                <div class="popup-body">
+                    <div class="subtitle">
+                        填写注册表单，我们会将您的喜好同步到所有设备上。
+                    </div>
+                    <div class="form">
+                        <input type="text" class="input" placeholder="用户名">
+                        <input type="text" class="input" placeholder="姓名">
+                        <input type="email" class="input" placeholder="邮箱地址">
+                        <input type="password" class="input" placeholder="密码">
+                        <input type="password" class="input" placeholder="确认密码">
+                        <button class="submit button js-submit">注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+    
+    
+    <div class="popup forgot-pass" id="recovery-pass">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="popup-head">
+                    <div class="title">找回密码</div>
+                </div>
+                <div class="popup-body">
+                    <div class="subtitle">
+                        使用邮箱找回您的密码
+                    </div>
+                    <div class="form">
+                        <input type="email" class="input" placeholder="邮箱地址">
+                        <button class="submit button js-submit">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+    
+    <!-- 注册后显示 -->
+    <div class="popup profile-setting" id="profile-setting">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="select-userpic">
+                    <div class="userpic">U</div>
+                    <div class="select">
+                        <input type="file" id="profile-pic">
+                        <label for="profile-pic">更换头像</label>
+                    </div>
+                </div>
+                <div class="popup-head">
+                    <div class="title">设置</div>
+                </div>
+                <div class="popup-body">
+                    <div class="form">
+                        <input type="text" class="input" placeholder="Username" value="Hikari">
+                        <input type="text" class="input" placeholder="Name" value="Hikari">
+                        <input type="email" class="input" placeholder="Email" value="test@test.com">
+                        <div class="label">修改密码</div>
+                        <input type="password" class="input" placeholder="旧的密码">
+                        <input type="password" class="input" placeholder="新的密码">
+                        <input type="password" class="input" placeholder="确定新密码">
+                        <button class="submit button js-submit">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+    
+    
+    <div class="popup contact-us" id="contact-us">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="popup-head">
+                    <div class="title">Contact Us</div>
+                </div>
+                <div class="popup-body">
+                    <div class="subtitle">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                    </div>
+                    <div class="form">
+                        <input type="text" class="input" placeholder="Name">
+                        <input type="email" class="input" placeholder="Email">
+                        <input type="text" class="input" placeholder="Phone">
+                        <textarea class="textarea" placeholder="Your Massage"></textarea>
+                        <button class="submit button js-submit">Send Massage</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+    
+    <div class="popup book-now-popup" id="book-now">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="popup-head">
+                    <div class="title">Book Now</div>
+                </div>
+                <div class="popup-body">
+                    <div class="tour-title">
+                        <div class="img">
+                            <img src="img/tour-item-3.jpg" alt="">
+                        </div>
+                        <div class="tour-name">
+                            Tour to the Arctic is an exotic journey on the verge of extreme
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <div class="col">
+                            <div class="label">Check In</div>
+                            <div class="date">
+                                <div class="day">09</div>
+                                <div class="month">May</div>
+                                <div class="year">2019</div>
+                            </div>
+                            <div class="label">Aduld: <span>3</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="label">Check Out</div>
+                            <div class="date">
+                                <div class="day">09</div>
+                                <div class="month">May</div>
+                                <div class="year">2019</div>
+                            </div>
+                            <div class="label">Children: <span>0</span></div>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <input type="text" class="input" placeholder="Your First Name">
+                        <input type="text" class="input" placeholder="Your Last Name">
+                        <input type="email" class="input" placeholder="Your Email">
+                        <input type="tel" class="input" placeholder="Your Number Phone">
+                        <textarea class="textarea" placeholder="Where are your address?"></textarea>
+                        <textarea class="textarea" placeholder="Note:"></textarea>
+                        <button class="submit button js-submit">Book Now | <b>$356</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+    
+    <div class="popup success-popup" id="contact-us-success">
+        <div class="scroll">
+            <div class="scroll_wrap">
+                <div class="popup-head">
+                    <div class="title">Success</div>
+                </div>
+                <div class="popup-body">
+                    <div class="subtitle">
+                        Your message was successfully sent. We will contact you shortly
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/lightgallery.js"></script> 
+	<script src="js/jquery.mousewheel.min.js"></script> 
+    <script src="js/slick.min.js"></script>
+    <script src="js/hammer.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/func.js"></script>
+</body>
+</html>

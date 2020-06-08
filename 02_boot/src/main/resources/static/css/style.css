@@ -1526,6 +1526,32 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   top: 16px;
   content: '';
 }
+
+.popup.failed-popup .popup-head .title {
+  position: relative;
+  padding-left: 60px;
+}
+.popup.failed-popup .popup-head .title:before {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FF4500;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  content: '';
+}
+.popup.failed-popup .popup-head .title:after {
+  width: 16px;
+  height: 22px;
+  background: url(../img/close.svg) center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  content: '';
+}
+
 .popup.profile-setting .social-links {
   margin-bottom: 24px;
 }
@@ -6447,6 +6473,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 }
 .sidebar ._block {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .sidebar ._block .block_title {
   font-size: 30px;
@@ -6915,7 +6942,8 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .tour_page_head .top-info {
   position: relative;
   padding-right: 222px;
-  margin-bottom: 44px;
+  margin-bottom: 22px;
+  margin-top: 400px;
 }
 .tour_page_head .top-info .country {
   font-size: 25px;
@@ -7007,8 +7035,8 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   transition: all .2s linear;
 }
 .tour_page_head .top-info .controls .add_bookmark {
-  width: 44px;
-  height: 44px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   background: #ffffff;
   position: relative;
@@ -7021,28 +7049,28 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 .tour_page_head .top-info .controls .add_bookmark .not-added {
-  width: 18px;
-  height: 18px;
+  width: 36px;
+  height: 36px;
   background: url(../img/bookmark.svg) center center no-repeat;
   background-size: contain;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -9px;
-  margin-left: -9px;
+  margin-top: -18px;
+  margin-left: -18px;
   content: '';
   opacity: 1;
 }
 .tour_page_head .top-info .controls .add_bookmark .is-added {
-  width: 18px;
-  height: 18px;
+  width: 36px;
+  height: 36px;
   background: url(../img/bookmark-active.svg) center center no-repeat;
   background-size: contain;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -9px;
-  margin-left: -9px;
+  margin-top: -18px;
+  margin-left: -18px;
   content: '';
   z-index: 2;
 }
@@ -7060,8 +7088,8 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   position: absolute;
   top: 0;
   left: 0;
-  width: 44px;
-  height: 44px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   background: #D03000;
   transform: scale(0);
@@ -11064,6 +11092,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .about-us-page .title {
   margin-bottom: 40px;
   text-align: center;
+  font-family: 'SimHei';
 }
 .about-us-page .about-us {
   text-align: center;
@@ -11071,13 +11100,13 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .about-us-page .description {
   color: #222;
   font-size: 26px;
-  font-style: italic;
+  /* font-style: italic; */
   margin-bottom: 28px;
 }
 .about-us-page .text {
   font-size: 21px;
   color: #919193;
-  text-align: center;
+  text-align: left;
 }
 .about-us-page .image-block {
   margin-top: 40px;
@@ -11284,11 +11313,12 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   left: 50%;
 }
 .about-us-page .team_item .image .socials .links a.facebook:before {
-  width: 16px;
-  height: 28px;
-  background-image: url(../img/facebook-logo.svg);
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/github-logo.svg);
+  filter: grayscale(100%);
   margin-top: -14px;
-  margin-left: -8px;
+  margin-left: -35px;
 }
 .about-us-page .team_item .image .socials .links a.instagram:before {
   width: 26px;
@@ -11539,6 +11569,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   }
   .about-us-page .title {
     margin-bottom: 20px;
+    font-family: 'SimHei';
   }
   .about-us-page .text {
     font-size: 18px;

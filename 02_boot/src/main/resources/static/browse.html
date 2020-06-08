@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,70 +22,73 @@
 </head>
 <body>
     <div class="container">
-<div class="top_panel inversion">
-           <div class="wrap">
-               <div class="wrap_float">
-                                      <div class="left">
-                       <a href="index.html" class="logo"> <!-- 网站logo -->
-                           <img src="img/IMG_0428.PNG" alt="">  
-                       </a>
-                       <div class="search_btn"></div>
-                   </div>
-                   <div class="menu_wrap" id="menu_wrap">
-                       <div class="scroll">
-                           <div class="center">
-                               <div class="menu">
-                                   <ul>
-                                       <li><a href="index.html"><span>主页</span></a></li>
-                                       <li><a href="travel-list-right-sidebar.html"><span>排行</span></a></li>
-                                       <li><a href="travel-list-image-header.html"><span>趋势</span></a></li>
-                                       <li > 
-                                           <a href="travel-list-full-width.html"><span>浏览</span></a>
-                                       </li>
-                                       <li><a href="contacts.html"><span>关于我们</span></a></li>
-                                   </ul>
+        <div class="top_panel inversion" id="top_panel">   <!-- 导航栏 -->
+            <div class="wrap">
+                <div class="wrap_float">
+                    <div class="left">
+                        <a href="index.html" class="logo"> <!-- 网站logo -->
+                            <img src="img/IMG_0428.PNG" alt="">  
+                        </a>
+                        <div class="input_wrap">
+                            <input type="search" class="input" placeholder="搜索景点">
+                        </div>
+                        <div class="search_btn"></div>
+                    </div>
+                    <div class="menu_wrap" id="menu_wrap">
+                        <div class="scroll">
+                            <div class="center">
+                                <div class="menu">
+                                    <ul>
+                                        <li><a href="index.html"><span>主页</span></a></li>
+                                        <li><a href="happiness.html"><span>排行</span></a></li>
+                                        <li><a href="popular.html"><span>趋势</span></a></li>
+                                        <li > 
+                                            <a href="browse.html"><span>浏览</span></a>
+                                        </li>
+                                        <li><a href="about-us.html"><span>关于我们</span></a></li>
+                                    </ul>
 
-                                   <div class="mobile_content">
-                                       <div class="currency_mob">
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="close" id="menu-close">
-                                   <span></span>
-                                   <span></span>
-                                   <span></span>
-                               </div>
-                           </div>
-                           <div class="right">
-                               <div class="tel"><a href=""><span>用户名</span></a></div>
-                               <a class="favorites-count" title="Favourites" href="favourites.html">
-                                   <div class="_counter">10</div>  <!-- 跟数据库交互！ -->
-                                   <div class="_text">收藏</div>
-                               </a>
-                           </div>
-                           <div class="user" id="userblock">
-                               <div class="userlink" id="userlink">
-<!--                                   <img src="img/userpic.jpg" alt="">-->
-                               </div>
-                               <div class="usermenu" id="usermenu">
-                                   <ul>
-                                       <li><a href="#" class="js-popup-open" data-href="#login">Login</a></li>
-                                       <li><a href="#" class="js-popup-open" data-href="#registration">Registration</a></li>
-                                       <li><a href="#" class="js-popup-open" data-href="#recovery-pass">Forgot password?</a></li>
-                                       <li><a href="#" class="js-popup-open" data-href="#profile-setting">Setting</a></li>
-                                   </ul>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="mobile_btn" id="mobile_btn">
-                       <span></span>
-                       <span></span>
-                       <span></span>
-                   </div>
-               </div>
-           </div>
-       </div>
+                                    <div class="mobile_content">
+                                        <div class="currency_mob">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="close" id="menu-close">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="tel"><a href=""><span>用户名</span></a></div>
+                                <a class="favorites-count" title="Favourites" href="favourites.html">
+                                    <div class="_counter">0</div>  <!-- 跟数据库交互！ -->
+                                    <div class="_text">收藏</div>
+                                </a>
+                            </div>
+                            <div class="user" id="userblock">
+                                <div class="userlink" id="userlink">
+    <!--                                   <img src="img/userpic.jpg" alt="">-->
+                                </div>
+                                <div class="usermenu" id="usermenu">
+                                    <ul>
+                                        <li><a href="#" class="js-popup-open" data-href="#login">登录</a></li>
+                                        <li><a href="#" class="js-popup-open" data-href="#registration">注册</a></li>
+                                        <li><a href="#" class="js-popup-open" data-href="#recovery-pass">忘记密码</a></li>
+                                        <li><a href="#" class="js-popup-open" data-href="#profile-setting">设置</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile_btn" id="mobile_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div class="breadcrumbs">
     <div class="wrap">
         <div class="wrap_float">
@@ -1312,10 +1315,12 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/lightgallery.js"></script> 
 	<script src="js/jquery.mousewheel.min.js"></script> 
     <script src="js/slick.min.js"></script>
     <script src="js/hammer.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/func.js"></script>
 </body>
 </html>

@@ -98,13 +98,13 @@
 <!--            &lt;!&ndash;            &lt;!&ndash;是否使用实际列名,默认为false&ndash;&gt;&ndash;&gt;-->
 <!--            &lt;!&ndash;            &lt;!&ndash;<property name="useActualColumnNames" value="false" />&ndash;&gt;&ndash;&gt;-->
 <!--        </table>-->
-        <table schema="" tableName="rating">
+        <table schema="" tableName="ratings">
 <!--            enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
 <!--            enableUpdateByExample="false" selectByExampleQueryId="false">-->
             <!--是否使用实际列名,默认为false-->
             <!--<property name="useActualColumnNames" value="false" />-->
         </table>
-        <table schema="" tableName="collection">
+        <table schema="" tableName="recommend">
             <!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
             <!--               enableUpdateByExample="false" selectByExampleQueryId="false">-->
             <!--            &lt;!&ndash;是否使用实际列名,默认为false&ndash;&gt;-->

@@ -52,7 +52,7 @@ public class UserController {
      * @param dto
      * @return
      */
-    @GetMapping("/collectionNum")
+    @PostMapping("/collectionNum")
     public String getNumbOfCollections(@RequestBody @Valid UserDTO dto) {
         long num = userService.getNumOfCollecions(dto);
         SucessVO sucessVO = new SucessVO();
