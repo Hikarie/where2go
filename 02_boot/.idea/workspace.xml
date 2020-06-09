@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e488299-a9f0-4be3-ad5e-cc6b5564c0b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data preparation/flickr/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data preparation/flickr/download.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data preparation/flickr/urlManage.py" beforeDir="false" />
-    </list>
+    <list default="true" id="76a9a3be-e6f5-47af-aecc-0cd3c2326194" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="ProjectId" id="1d20CbjfMXP1wuiocCYzkVVzvvX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectId" id="1d39esUM9SYwdZ08LoyuBgguHSc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../新建文件夹/02_boot" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="com.alibabacloud.intellij.config.RegionConfigurable" />
+    <property name="jsx.switch.disabled" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -61,16 +61,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3e488299-a9f0-4be3-ad5e-cc6b5564c0b0" name="Default Changelist" comment="" />
-      <created>1591643007649</created>
+      <changelist id="76a9a3be-e6f5-47af-aecc-0cd3c2326194" name="Default Changelist" comment="" />
+      <created>1591607753469</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591643007649</updated>
-      <workItem from="1591643014301" duration="43000" />
-      <workItem from="1591668321629" duration="347000" />
-      <workItem from="1591668710140" duration="41000" />
-      <workItem from="1591668796634" duration="71000" />
-      <workItem from="1591668985895" duration="199000" />
+      <updated>1591607753469</updated>
+      <workItem from="1591607756691" duration="16998000" />
+      <workItem from="1591669303794" duration="19955000" />
+      <workItem from="1591691143139" duration="12000" />
     </task>
     <servers />
   </component>
@@ -89,5 +87,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
