@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e488299-a9f0-4be3-ad5e-cc6b5564c0b0" name="Default Changelist" comment="" />
+    <list default="true" id="3e488299-a9f0-4be3-ad5e-cc6b5564c0b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data preparation/flickr/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data preparation/flickr/download.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data preparation/flickr/urlManage.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +29,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../新建文件夹/02_boot" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -60,6 +67,10 @@
       <option name="presentableId" value="Default" />
       <updated>1591643007649</updated>
       <workItem from="1591643014301" duration="43000" />
+      <workItem from="1591668321629" duration="347000" />
+      <workItem from="1591668710140" duration="41000" />
+      <workItem from="1591668796634" duration="71000" />
+      <workItem from="1591668985895" duration="199000" />
     </task>
     <servers />
   </component>
@@ -71,7 +82,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
