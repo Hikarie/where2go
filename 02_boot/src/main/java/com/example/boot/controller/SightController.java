@@ -57,17 +57,7 @@ public class SightController {
      * @param dto include: email sightName
      * @return
      */
-<<<<<<< HEAD
-=======
-//    @GetMapping("/information")
-//    public String getInformation(@RequestBody @Valid SightDTO dto){
-//        SightInfo sightInfo = sightService.getSight(dto);
-//        SucessVO sucessVO = new SucessVO();
-//        sucessVO.setResult(sightInfo);
-//        String res = JSON.toJSONString(sucessVO);
-//        return res;
-//    }
->>>>>>> 75a939f96df3b48fe51c86bcbdf4c317b9f8d1ac
+
     @PostMapping("/information")
     public String getInformation(@RequestBody @Valid CollectionDTO dto){
         SightInfo sightInfo = sightService.getSight(dto);
