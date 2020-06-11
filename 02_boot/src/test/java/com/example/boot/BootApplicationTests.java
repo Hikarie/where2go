@@ -149,8 +149,9 @@ class BootApplicationTests {
             BeanUtils.copyProperties(it, sightVO);
             listVO.add(sightVO);
         }
-        String jsonCity = JSON.toJSONString(listVO);
-        System.out.println("{\"sight\":" + jsonCity + "}");
+        assertNotNull(listVO);
+//        String jsonCity = JSON.toJSONString(listVO);
+//        System.out.println("{\"sight\":" + jsonCity + "}");
     }
 
     /**
@@ -171,7 +172,7 @@ class BootApplicationTests {
             BeanUtils.copyProperties(it, sightVO);
             listOfSightVO.add(sightVO);
         }
-        System.out.println(JSON.toJSONString(listOfSightVO));
+//        System.out.println(JSON.toJSONString(listOfSightVO));
         assertNotNull(listOfSightVO);
     }
 
@@ -193,7 +194,7 @@ class BootApplicationTests {
             BeanUtils.copyProperties(it, sightVO);
             listOfSightVO.add(sightVO);
         }
-        System.out.println(JSON.toJSONString(listOfSightVO));
+//        System.out.println(JSON.toJSONString(listOfSightVO));
         assertNotNull(listOfSightVO);
     }
 
@@ -253,7 +254,7 @@ class BootApplicationTests {
 //            List<SightVO> listOfSightVO = new LinkedList<>();
             SightInfo sightInfo = new SightInfo();
             BeanUtils.copyProperties(sight, sightInfo);
-            System.out.println(JSON.toJSONString(sightInfo));
+//            System.out.println(JSON.toJSONString(sightInfo));
             assertNotNull(sightInfo);
         }
 
@@ -312,7 +313,7 @@ class BootApplicationTests {
         BeanUtils.copyProperties(sight5, sightVO5);
         sightVO5.setDescription(null);
         listOfSightVO.add(sightVO5);
-        System.out.println(JSON.toJSONString(listOfSightVO));
+//        System.out.println(JSON.toJSONString(listOfSightVO));
         assertNotNull(listOfSightVO);
     }
 
@@ -333,7 +334,7 @@ class BootApplicationTests {
             BeanUtils.copyProperties(it, sightVO);
             listOfSightVO.add(sightVO);
         }
-        System.out.println(JSON.toJSONString(listOfSightVO));
+//        System.out.println(JSON.toJSONString(listOfSightVO));
         assertNotNull(listOfSightVO);
     }
 
@@ -354,7 +355,7 @@ class BootApplicationTests {
             BeanUtils.copyProperties(it, sightVO);
             listOfSightVO.add(sightVO);
         }
-        System.out.println(JSON.toJSONString(listOfSightVO));
+//        System.out.println(JSON.toJSONString(listOfSightVO));
         assertNotNull(listOfSightVO);
     }
 
