@@ -202,25 +202,6 @@ public class SightService {
         return listOfSightVO;
     }
 
-//    /**
-//     * 在幸福排行榜的侧边栏展示人气排行的前五个景点
-//     * @return
-//     */
-//    public List<SightVO> popularityOf() {
-//        SightExample example = new SightExample();
-//        SightExample.Criteria criteria = example.createCriteria();
-//        example.setOrderByClause("views DESC");
-//        RowBounds rowBounds = new RowBounds(0, 5);
-//        List<Sight> list = sightMapper.selectByExampleWithBLOBsWithRowbounds(example, rowBounds);
-//        List<SightVO> listOfSightVO = new LinkedList<>();
-//        for (Sight it : list) {
-//            SightVO sightVO = new SightVO();
-//            BeanUtils.copyProperties(it, sightVO);
-//            listOfSightVO.add(sightVO);
-//        }
-//        return listOfSightVO;
-//    }
-
     /**
      * 返回人气指数排行榜
      * @return
