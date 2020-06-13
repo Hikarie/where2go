@@ -5,7 +5,7 @@ package com.example.boot.vo.result;
  * @Date : 2020/6/4 1:20
  */
 public class FailVO {
-    private int status = 1;
+    private int status = 0;
     private String msg = "失败";
 
     public int getStatus() {
