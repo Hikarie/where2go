@@ -24,5 +24,4 @@ public class FailVO {
         this.msg = msg;
     }
 
-
 }

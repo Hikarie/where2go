@@ -8,27 +8,27 @@ var success_attention = function(){
     $(".popup").removeClass("opened");
     $("#contact-us-success").addClass("opened");
     setTimeout("location.href='index.html';", 1000);
-}
+};
 
 var failed_attention = function(){
     $(".popup").removeClass("opened");
     $("#contact-us-failed").addClass("opened");
-}
+};
 
 var login = function(){
     $(".popup").removeClass("opened");
     $("#login").addClass("opened");
-}
+};
 
 var login_attention = function(){
 
     $(".popup.failed-popup .popup-head .title").text("请先登录！");
-    $(".popup-body .subtitle").text("立即转到登录……")
+    $(".popup-body .subtitle").text("立即转到登录……");
     $(".popup").removeClass("opened");
     $("#contact-us-failed").addClass("opened");
     setTimeout("login()", 1000);
 
-}
+};
 
 var send = function(sight_name, email) {
     $.ajax({
@@ -47,7 +47,7 @@ var send = function(sight_name, email) {
             }
         }
     })
-}
+};
 
 // 登录
 // 检测登录状态，根据状态发送请求、展示页面
@@ -102,7 +102,7 @@ $(function(){
             success: function(d){ 
                 if(d.status == 1){
                     document.cookie = "email="+data.email+";";
-                    console.log(d.message)
+                    console.log(d.message);
                     e.preventDefault();
                     success_attention();
                     // location.href = 'index.html';
@@ -114,7 +114,7 @@ $(function(){
                 }
             }
         })
-    })
+    });
 
     $("#exit_btn").on("click", function(e){
         $.cookie('email', '', { expires: -1 });
@@ -122,7 +122,7 @@ $(function(){
             success_attention();
         }
     })
-})
+});
 
 // 注册
 $(function(){
@@ -132,7 +132,7 @@ $(function(){
             name:$(".popup-body .form .input[name='name']").val(),
             email:$(".popup-body .form .input[name='reg_email']").val(),
             password:$(".popup-body .form .input[name='reg_password']").val()
-        }
+        };
         
         $.ajax({
             type: 'post',
@@ -144,7 +144,7 @@ $(function(){
                 if(d.status == 1){
                     // 直接转向登录状态
                     document.cookie = "email="+data.email+";";
-                    console.log(d.message)
+                    console.log(d.message);
                     e.preventDefault();
                     success_attention();
                 }
@@ -156,7 +156,7 @@ $(function(){
             }
         })
     })
-})
+});
 
 // 收藏
 $(function(){
@@ -205,7 +205,7 @@ $(function(){
                 }
             })
         }
-    })
+    });
 
     bookmark.on("click", function(e){
         let email = $.cookie("email");
@@ -239,7 +239,7 @@ $(function(){
                 }
             })
         }
-    })
+    });
 
     tour_btn.on("click", function(e){
         let email = $.cookie("email");
@@ -273,7 +273,7 @@ $(function(){
             })
         }
     })
-})
+});
 
 // 点击景点
 // 进入景点详情页面“tour.html”
@@ -292,7 +292,7 @@ $(function(){
         sight_name = name[slide_button.index(this)].textContent;
         console.log(sight_name);
         send(sight_name, email);
-    })
+    });
 
     // 幸福排行
     // let hapiness_item = $(".travel-list .posts .item");
@@ -318,12 +318,12 @@ $(function(){
         console.log(sight_name);
         send(sight_name, email);
     })
-})
+});
 
 // top-panel搜索栏
 $(function(){
     $(".search_btn").on("click", function(e){
-        let search_input = $("input[type='search']")
+        let search_input = $("input[type='search']");
         if(search_input.val() === ""){
             e.preventDefault();
             $("#modal_search").fadeIn();
@@ -335,12 +335,12 @@ $(function(){
         }
     })
 
-})
+});
 
 // 搜索栏
 $(function(){
     $(".submit button[type='search']").on("click", function(e){
-        let search_input = $("input[type='email']")
+        let search_input = $("input[type='email']");
         if(search_input.val() === ""){
 
         }
@@ -348,7 +348,7 @@ $(function(){
             location.href = 'browse.html';
         }
     })
-})
+});
 
 /*----------------------------------------------------------------------------------
 1. 首页
@@ -363,7 +363,7 @@ $(function(){
         let slide_title = $(".slide_title");
         let next_title = $(".next_title");
         let slide_text = $(".text");
-        let slide_img = $(".bg-img")
+        let slide_img = $(".bg-img");
         // most_hapiness
         let list_country = country.slice(3, 12);
         let list_title = $("._title:contains('景点')");
@@ -408,7 +408,7 @@ $(function(){
             }
         });
     }
-})
+});
 
 
 /*----------------------------------------------------------------------------------
@@ -462,7 +462,7 @@ var generate_html = function(curr_page, d, content, count){
         let email = $.cookie("email");
         send(sight_name, email);
     })
-}
+};
 // page_body现实主要幸福指数排行榜
 $(function(){
     if(location.href.match("happiness.html")) {
@@ -485,20 +485,23 @@ $(function(){
                     for (let i = 0; i < page_num; i++) {
                         page_list.append("<li><a href='#'>" + (i + 1) + "</a></li>");
                     }
-                    $(".travel-list.right-sidebar .left_content #happiness_page ul li a:contains('" + curr_page + "')").addClass("active");
+
+                    let page = $(".travel-list.right-sidebar .left_content #happiness_page ul li a");
+                    page[curr_page-1].className = "active";
                     generate_html(1, d, content, count);
 
                     $("#happiness_page ul li a").on("click", function (e) {
                         let prev_page = curr_page;
                         curr_page = this.textContent;
                         console.log(curr_page);
-                        $(".travel-list.right-sidebar .left_content #happiness_page ul li a:contains('" + curr_page + "')").addClass("active");
+                        page[curr_page-1].className = "active";
+                        // $(".travel-list.right-sidebar .left_content #happiness_page ul li a:contains('" + curr_page + "')").addClass("active");
                         $(".travel-list.right-sidebar .left_content #happiness_page ul li a:contains('" + prev_page + "')").removeClass("active");
                         generate_html(curr_page, res, content, count);
                     })
                 }
             }
-        })
+        });
 
         // 翻页
         $("#happiness_page .arrow.next").on("click", function (e) {
@@ -508,7 +511,7 @@ $(function(){
             $(".travel-list.right-sidebar .left_content #happiness_page ul li a:contains('" + curr_page + "')").addClass("active");
             $(".travel-list.right-sidebar .left_content #happiness_page ul li a:contains('" + prev_page + "')").removeClass("active");
             generate_html(curr_page, res, content, count);
-        })
+        });
         $("#happiness_page .arrow.prev").on("click", function (e) {
             let prev_page = curr_page;
             curr_page--;
@@ -527,7 +530,7 @@ $(function(){
         //     generate_html(curr_page, res, content, count);
         // })
     }
-})
+});
 
 // 侧栏的人气预览
 $(function(){
@@ -550,7 +553,7 @@ $(function(){
                 }
                 let sidebar_item = $(".sidebar ._block .popular .item");
                 sidebar_item.on("click", function(e){
-                    let name = $(".sidebar ._block .popular .item_top ._title")
+                    let name = $(".sidebar ._block .popular .item_top ._title");
                     sight_name = name[sidebar_item.index(this)].textContent;
                     console.log(sight_name);
                     let email = $.cookie("email");
@@ -559,7 +562,7 @@ $(function(){
             }
         })
     }
-})
+});
 
 /*----------------------------------------------------------------------------------
 3. 人气排行
@@ -615,12 +618,12 @@ var generate_tour_item = function(curr_page, d, content, count){
         let email = $.cookie("email");
         send(sight_name, email);
     })
-}
+};
 
 $(function(){
     if(location.href.match("popular.html")) {
         let content = $("#popular_content");
-        var page_list = $(".travel-list.full-width #popular_page ul")
+        var page_list = $(".travel-list.full-width #popular_page ul");
         let count = 10;  // 每页显示10个
         let curr_page = 1;
 
@@ -652,7 +655,7 @@ $(function(){
                     })
                 }
             }
-        })
+        });
 
         $("#popular_page .arrow.next").on("click", function (e) {
             let prev_page = curr_page;
@@ -661,7 +664,7 @@ $(function(){
             $("#popular_page ul li a:contains('" + curr_page + "')").addClass("active");
             $("#popular_page ul li a:contains('" + prev_page + "')").removeClass("active");
             generate_tour_item(curr_page, res, content, count);
-        })
+        });
         $("#popular_page .arrow.prev").on("click", function (e) {
             let prev_page = curr_page;
             curr_page--;
@@ -672,7 +675,7 @@ $(function(){
         })
 
     }
-})
+});
 
 /*----------------------------------------------------------------------------------
 4. 收藏
@@ -681,7 +684,7 @@ $(function(){
     if(location.href.match("favourites.html")) {
         let email = $.cookie("email");
         let content = $("#favour_content");
-        var page_list = $("#favour_page ul")
+        var page_list = $("#favour_page ul");
         let count = 6;  // 每页显示6个
         $("#favour_page .arrow.next").on("click", function (e) {
             let prev_page = curr_page;
@@ -690,7 +693,7 @@ $(function(){
             $("#favour_page ul li a:contains('" + curr_page + "')").addClass("active");
             $("#favour_page ul li a:contains('" + prev_page + "')").removeClass("active");
             generate_tour_item(curr_page, d, content, count);
-        })
+        });
         $("#favour_page .arrow.prev").on("click", function (e) {
             let prev_page = curr_page;
             curr_page--;
@@ -698,7 +701,7 @@ $(function(){
             $("#favour_page ul li a:contains('" + curr_page + "')").addClass("active");
             $("#favour_page ul li a:contains('" + prev_page + "')").removeClass("active");
             generate_tour_item(curr_page, d, content, count);
-        })
+        });
 
         $.ajax({
             type: 'post',
@@ -737,7 +740,7 @@ $(function(){
             }
         })
     }
-})
+});
 
 /*----------------------------------------------------------------------------------
 5. 景点详情页面
@@ -773,8 +776,9 @@ $(function () {
             data: data,
             // options: options
         });
+
     }
-})
+});
 
 $(function () {
     if(location.href.match("tour.html")) {
@@ -792,14 +796,26 @@ $(function () {
                 }),
                 success: function (d) {
                     let img = $(".sidebar ._block .popular .item_top .img");
-                    let title = $(".sidebar ._block .popular .item_top ._title")
+                    let title = $(".sidebar ._block .popular .item_top ._title");
                     for (let i = 0; i < 3; i++) {
                         img[i].style.backgroundImage = "url(img/tour/" + d.result[i].sight_name + ".jpg)";
                         title[i].textContent = d.result[i].sight_name;
-                        window.localStorage.removeItem("d");
+                        // window.localStorage.removeItem("d");
                     }
+                    img.on("click", function(e){
+                        let sight_name = title[img.index(this)].textContent;
+                        console.log(sight_name);
+                        let email = $.cookie("email");
+                        send(sight_name, email);
+                    });
+                    title.on("click", function(e){
+                        let sight_name = this.textContent;
+                        console.log(sight_name);
+                        let email = $.cookie("email");
+                        send(sight_name, email);
+                    })
                 }
             })
         }
     }
-})
+});
