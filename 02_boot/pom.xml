@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.example</groupId>
+    <groupId>com.cug</groupId>
     <artifactId>boot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
     <name>boot</name>
     <description>基于情感识别的景点推荐系统</description>
@@ -28,7 +28,7 @@
     <!--maven 多环境配置-->
     <profiles>
         <profile>
-            <id>dev</id>
+            <id>prod</id>
             <activation>
                 <!-- activeByDefault 为 true 表示，默认激活 id为dev 的profile-->
                 <activeByDefault>true</activeByDefault>
@@ -36,13 +36,13 @@
             <!-- properties 里面可以添加自定义节点，如下添加了一个env节点 -->
             <properties>
                 <!-- 这个节点的值可以在maven的其他地方引用，可以简单理解为定义了一个叫env的变量 -->
-                <env>dev</env>
+                <env>prod</env>
             </properties>
         </profile>
         <profile>
-            <id>prod</id>
+            <id>dev</id>
             <properties>
-                <env>prod</env>
+                <env>dev</env>
             </properties>
         </profile>
     </profiles>
