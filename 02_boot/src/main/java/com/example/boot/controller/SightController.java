@@ -26,101 +26,93 @@ public class SightController {
     private SightService sightService;
 
     /**
-     * GET 在首页返回幸福指数排行前五的五个景点
-     * @return
+     * 在首页返回幸福指数排行前五的五个景点
      */
     @GetMapping("/happinessOfTop5")
     public String happinessOfTop5() {
         List<SightVO> listOfSightVO = sightService.happinessOfTop5();
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
-        String res = JSON.toJSONString(sucessVO);
-        return res;
+        return JSON.toJSONString(sucessVO);
     }
 
     /**
-     * GET 在首页返回人气指数（浏览量）排行前五的五个景点
-     * @return
+     * 在首页返回人气指数（浏览量）排行前五的五个景点
      */
     @GetMapping("/popularityOfTop5")
     public String popularityOfTop5() {
         List<SightVO> listOfSightVO = sightService.popularityOfTop5();
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
-        String res = JSON.toJSONString(sucessVO);
-        return res;
+        return JSON.toJSONString(sucessVO);
     }
 
     /**
-     * POST 返回某个景点的所有信息，并更新景点访问量 +1
+     * 返回某个景点的所有信息，并更新景点访问量 +1
      * 需要获取用户当前的信息，如果用户处于登录状态，则修改访问量+1
      * @param dto include: email sightName
-     * @return
      */
-
     @PostMapping("/information")
     public String getInformation(@RequestBody @Valid CollectionDTO dto){
         SightInfo sightInfo = sightService.getSight(dto);
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(sightInfo);
-        String res = JSON.toJSONString(sucessVO);
-        return res;
+        return JSON.toJSONString(sucessVO);
     }
 
 
     /**
-     * GET 侧边栏展示个性化推荐的五个景点
-     * @param dto
-     * @return
+     * 侧边栏展示个性化推荐的五个景点
      */
     @PostMapping("/sidebar/personalizedSight")
     public String getPersonalizedSight(@RequestBody @Valid UserDTO dto){
         List<SightVO> listOfSightVO=sightService.personalizedSight(dto);
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
-        String res = JSON.toJSONString(sucessVO);
-        return res;
+        return JSON.toJSONString(sucessVO);
     }
 
     /**
-     * GET 展示所有景点的幸福排行情况
-     * @return
+     * 展示所有景点的幸福排行情况
      */
     @GetMapping("/happinessRanking")
     public String getHappinessRanking(){
         List<SightVO> listOfSightVO = sightService.happinessRanking();
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
-        String res = JSON.toJSONString(sucessVO);
-        return res;
+        return JSON.toJSONString(sucessVO);
     }
 
     /**
-     * GET 在侧边栏展示人气排行前五的景点信息
-     * @return
+     * 在侧边栏展示人气排行前五的景点信息
      */
     @GetMapping("/sidebar/popularityOfTop5")
     public String getPopularityOfTop5(){
         List<SightVO> listOfSightVO = sightService.popularityOfTop5();
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
-        String res = JSON.toJSONString(sucessVO);
-        return res;
+        return JSON.toJSONString(sucessVO);
     }
 
     /**
-     * GET 展示所有景点的人气排行情况
-     * @return
+     * 展示所有景点的人气排行情况
      */
     @GetMapping("/popularityRanking")
     public String getPopularityRanking(){
         List<SightVO> listOfSightVO = sightService.popularityRanking();
         SucessVO sucessVO = new SucessVO();
         sucessVO.setResult(listOfSightVO);
-        String res = JSON.toJSONString(sucessVO);
-        return res;
+        return JSON.toJSONString(sucessVO);
     }
 
-
-
+    /**
+     * 关键词搜索
+     */
+    @GetMapping("/search")
+    public String search(@RequestParam("key") String key){
+        List<SightVO> listOfSightVO = sightService.searchByKeyword(key);
+        SucessVO sucessVO = new SucessVO();
+        sucessVO.setResult(listOfSightVO);
+        return JSON.toJSONString(sucessVO);
+    }
 }

@@ -36,9 +36,6 @@ public class UserService {
 
     /**
      * 用户注册
-     *
-     * @param dto
-     * @return
      */
     public int register(RegisterDTO dto) {
         //检查该邮箱是否已经注册过
@@ -62,9 +59,6 @@ public class UserService {
 
     /**
      * 用户登录
-     *
-     * @param dto
-     * @return
      */
     public boolean login(LoginDTO dto) {
         UserExample example = new UserExample();
@@ -82,9 +76,6 @@ public class UserService {
 
     /**
      * 获取用户收藏的景点个数
-     *
-     * @param dto
-     * @return
      */
     public long getNumOfCollecions(UserDTO dto) {
         // 获取用户ID
@@ -103,9 +94,6 @@ public class UserService {
 
     /**
      * 用户收藏景点
-     *
-     * @param dto
-     * @return
      */
     public int addCollection(CollectionDTO dto) {
         UserExample userExample = new UserExample();
@@ -142,10 +130,8 @@ public class UserService {
 
     /**
      * 获取景点收藏列表
-     *
-     * @param dto
-     * @return
      */
+    /// 分页查询
     public List<SightVO> getCollectionList(UserDTO dto) {
         // 获取用户ID
         UserExample userExample = new UserExample();

@@ -34,11 +34,8 @@ public class SightService {
     @Autowired(required = false)
     private RatingsMapper ratingsMapper;
 
-
     /**
      * 展示幸福指数最高的五个景点
-     *
-     * @return
      */
     public List<SightVO> happinessOfTop5() {
         SightExample example = new SightExample();
@@ -57,8 +54,6 @@ public class SightService {
 
     /**
      * 展示人气指数最高的五个景点
-     *
-     * @return
      */
     public List<SightVO> popularityOfTop5() {
         SightExample example = new SightExample();
@@ -77,9 +72,6 @@ public class SightService {
 
     /**
      * 获取景点的详细信息,如果已登录则记录用户行为
-     *
-     * @param dto
-     * @return
      */
     public SightInfo getSight(CollectionDTO dto) {
         if(dto.getEmail()==null){
@@ -135,8 +127,6 @@ public class SightService {
 
     /**
      * 在侧边栏展示个性化推荐的五个景点
-     * @param dto
-     * @return
      */
     public List<SightVO> personalizedSight(UserDTO dto) {
         UserExample userExample = new UserExample();
@@ -186,8 +176,8 @@ public class SightService {
 
     /**
      * 返回幸福指数排行榜
-     * @return
      */
+    /// 分页查询
     public List<SightVO> happinessRanking() {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
@@ -204,8 +194,8 @@ public class SightService {
 
     /**
      * 返回人气指数排行榜
-     * @return
      */
+    /// 分页查询
     public List<SightVO> popularityRanking() {
         SightExample example = new SightExample();
         SightExample.Criteria criteria = example.createCriteria();
@@ -220,5 +210,19 @@ public class SightService {
         return listOfSightVO;
     }
 
-
+    /**
+     * 调用了mysql中的全文索引，实现了一个简单的搜索引擎
+     */
+    public List<SightVO> searchByKeyword(String keyword){
+        SightExample example = new SightExample();
+        SightExample.Criteria criteria = example.createCriteria();
+        List<Sight> list = sightMapper.selectByFulltextSight(keyword);
+        List<SightVO> listOfSightVO = new LinkedList<>();
+        for (Sight it : list) {
+            SightVO sightVO = new SightVO();
+            BeanUtils.copyProperties(it, sightVO);
+            listOfSightVO.add(sightVO);
+        }
+        return listOfSightVO;
+    }
 }

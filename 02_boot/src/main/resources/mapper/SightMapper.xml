@@ -601,4 +601,13 @@
       order by ${orderByClause}
     </if>
   </select>
+  <!--下列方法调用了mysql中的全文索引，实现了一个简单的搜索引擎-->
+  <select id="selectByFulltextSight" parameterType="java.lang.String"  resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from sight
+    where match(sight_name, sight_type, state, country, city, description) against(#{keyword} IN BOOLEAN MODE)
+  </select>
 </mapper>
