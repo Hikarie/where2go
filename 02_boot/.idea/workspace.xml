@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76a9a3be-e6f5-47af-aecc-0cd3c2326194" name="Default Changelist" comment="" />
+    <list default="true" id="76a9a3be-e6f5-47af-aecc-0cd3c2326194" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/destination-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/story-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/story-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/story-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/story-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/story-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/story-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/story-7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/browse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/browse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favourites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/favourites.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/happiness.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/happiness.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/func.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/func.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/popular.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/popular.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/tour.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/tour.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +51,12 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
@@ -69,6 +93,8 @@
       <workItem from="1591607756691" duration="16998000" />
       <workItem from="1591669303794" duration="19955000" />
       <workItem from="1591691143139" duration="12000" />
+      <workItem from="1599125280375" duration="12982000" />
+      <workItem from="1599200771371" duration="5034000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="69.33" height="71" viewBox="0 0 69.33 71">
+  <defs>
+    <pattern id="pattern" width="1" height="1" viewBox="15.492 15.01 40.016 40.98">
+      <image preserveAspectRatio="xMidYMid slice" width="71" height="71" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAABYklEQVR4nO3csU3DUABFUQdlg/SkYwdWSImShg2YiCGAlhHIDukYgBnMBCmIAt/ontNbesWVXfjb0wQAAAAAAAAAAAAAAAD8P6vjtH0YPYJx1vM0v40ewTg3owcwlgDiBBAngDgBxAkgTgBxAogTQJwA4gQQJ4C49egBf2Gz31103dfr+5WXLM/qY7qdR4/4bffz50XXHVfbKy9ZHo+AOAHECSBOAHECiBNAnADiBBAngDgBxAkgTgBxAogTQJwA4hZ/HmCz3013L8+jZ1zkdHha/KESd4A4AcQJIE4AcQKIE0CcAOIEECeAOAHECSBOAHECiFv828Br8HXwee4AcQKIE0CcAOIEECeAOAHECSBOAHECiBNAnADiBBAngDgBxCV+F386PI2esFiJAyGc5xEQJ4A4AcQJIE4AcQKIE0CcAOIEECeAOAHECSBuPU3z4+gRAAAAAAAAAAAAAAAAAPzENx80HfzukhP1AAAAAElFTkSuQmCC"/>
+    </pattern>
+  </defs>
+  <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="34.665" cy="35.5" rx="34.665" ry="35.5" transform="translate(0)" fill="url(#pattern)"/>
+</svg>
