@@ -344,18 +344,30 @@ $(function(){
 
 });
 
-// // 搜索栏
-// $(function(){
-//     $(".submit button[type='search']").on("click", function(e){
-//         let search_input = $("input[type='email']");
-//         if(search_input.val() === ""){
-//
-//         }
-//         else{
-//             location.href = 'browse.html';
-//         }
-//     })
-// });
+// 搜索栏
+$(function(){
+    $(".subscribe_section .subscribe_block .right .submit").on("click", function(e){
+        let search_input = $(".subscribe_section .subscribe_block .right .input_wrap .input")[0];
+        if(search_input.value === ""){
+            location.href = "browse.html"
+        }
+        else{
+            location.href = "browse.html?key="+search_input.value;
+        }
+    })
+    $(".subscribe_section .subscribe_block .right .input_wrap .input").on("keyup", function(event) {
+        if (event.keyCode == "13") {
+            //回车执行查询
+            let search_input = $(".subscribe_section .subscribe_block .right .input_wrap .input")[0];
+            if(search_input.value === ""){
+                location.href = "browse.html"
+            }
+            else{
+                location.href = "browse.html?key="+search_input.value;
+            }
+        }
+    });
+});
 
 /*----------------------------------------------------------------------------------
 1. 首页
